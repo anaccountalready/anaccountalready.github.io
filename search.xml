@@ -6,6 +6,17 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>Next主题</title>
+    <url>/2024/10/05/hello-world/</url>
+    <content><![CDATA[<h2 id="指路Next入门教程"><a href="#指路Next入门教程" class="headerlink" title="指路Next入门教程"></a><a href="https://hexo-next.readthedocs.io/zh-cn/latest/next/">指路Next入门教程</a></h2>]]></content>
+      <categories>
+        <category>Hexo-Next</category>
+      </categories>
+      <tags>
+        <tag>Beautify</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>compiler impletment learn from Jack W. Crenshaw</title>
     <url>/2024/10/26/compiler-impletment-learn-from-Jack-W-Crenshaw/</url>
     <content><![CDATA[<h1 id="阶段1-Single-Num-expression"><a href="#阶段1-Single-Num-expression" class="headerlink" title="阶段1 Single Num expression"></a>阶段1 Single Num expression</h1><h2 id="只含”-“的二元表达式"><a href="#只含”-“的二元表达式" class="headerlink" title="只含”+-“的二元表达式"></a>只含”+-“的二元表达式</h2><blockquote>
@@ -38,17 +49,6 @@
         <tag>68000 Assembly</tag>
         <tag>Jack W. Crenshaw</tag>
         <tag>compiler</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Next主题</title>
-    <url>/2024/10/05/hello-world/</url>
-    <content><![CDATA[<h2 id="指路Next入门教程"><a href="#指路Next入门教程" class="headerlink" title="指路Next入门教程"></a><a href="https://hexo-next.readthedocs.io/zh-cn/latest/next/">指路Next入门教程</a></h2>]]></content>
-      <categories>
-        <category>Hexo-Next</category>
-      </categories>
-      <tags>
-        <tag>Beautify</tag>
       </tags>
   </entry>
 </search>
