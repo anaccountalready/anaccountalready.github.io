@@ -6,6 +6,17 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>Next主题</title>
+    <url>/2024/10/05/hello-world/</url>
+    <content><![CDATA[<h2 id="指路Next入门教程"><a href="#指路Next入门教程" class="headerlink" title="指路Next入门教程"></a><a href="https://hexo-next.readthedocs.io/zh-cn/latest/next/">指路Next入门教程</a></h2>]]></content>
+      <categories>
+        <category>Hexo-Next</category>
+      </categories>
+      <tags>
+        <tag>Beautify</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>compiler impletment learn from Jack W. Crenshaw</title>
     <url>/2024/10/26/compiler-impletment-learn-from-Jack-W-Crenshaw/</url>
     <content><![CDATA[<h1 id="阶段1-Single-Num-expression"><a href="#阶段1-Single-Num-expression" class="headerlink" title="阶段1 Single Num expression"></a>阶段1 Single Num expression</h1><h2 id="只含”-“的二元表达式"><a href="#只含”-“的二元表达式" class="headerlink" title="只含”+-“的二元表达式"></a>只含”+-“的二元表达式</h2><figure class="highlight pascal"><table><tr><td class="code"><pre><span class="line"><span class="comment">&#123;</span></span><br><span class="line"><span class="comment">    expr::= term&lt;+-term&gt;</span></span><br><span class="line"><span class="comment">    term::=GetNum</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">&#123;-------------------------------------------------------------&#125;</span></span><br><span class="line"><span class="function"><span class="keyword">procedure</span> <span class="title">Expression</span>;</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    Term;<span class="comment">&#123;MOVE #GetNum,D0;&#125;</span></span><br><span class="line">    EmitLn(<span class="string">&#x27;MOVE D0,D1&#x27;</span>);</span><br><span class="line">    <span class="keyword">case</span> Look <span class="keyword">of</span></span><br><span class="line">    <span class="string">&#x27;+&#x27;</span>: Add;<span class="comment">&#123;Match(&#x27;+&#x27;);Term;ADD D1,D0;结果存在D0&#125;</span></span><br><span class="line">    <span class="string">&#x27;-&#x27;</span>: Substract;<span class="comment">&#123;Match(&#x27;-&#x27;);Term;SUB D1,D0;NEG D0;结果存在D0&#125;</span></span><br><span class="line">    <span class="keyword">else</span> Expected(<span class="string">&#x27;加减操作符&#x27;</span>);</span><br><span class="line"><span class="keyword">end</span>;</span><br></pre></td></tr></table></figure>
@@ -23,17 +34,6 @@
         <tag>68000 Assembly</tag>
         <tag>Jack W. Crenshaw</tag>
         <tag>compiler</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Next主题</title>
-    <url>/2024/10/05/hello-world/</url>
-    <content><![CDATA[<h2 id="指路Next入门教程"><a href="#指路Next入门教程" class="headerlink" title="指路Next入门教程"></a><a href="https://hexo-next.readthedocs.io/zh-cn/latest/next/">指路Next入门教程</a></h2>]]></content>
-      <categories>
-        <category>Hexo-Next</category>
-      </categories>
-      <tags>
-        <tag>Beautify</tag>
       </tags>
   </entry>
 </search>
