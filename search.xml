@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Next主题</title>
-    <url>/2024/10/05/hello-world/</url>
-    <content><![CDATA[<h2 id="指路Next入门教程"><a href="#指路Next入门教程" class="headerlink" title="指路Next入门教程"></a><a href="https://hexo-next.readthedocs.io/zh-cn/latest/next/">指路Next入门教程</a></h2>]]></content>
-      <categories>
-        <category>Hexo-Next</category>
-      </categories>
-      <tags>
-        <tag>Beautify</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>compiler impletment learn from Jack W. Crenshaw</title>
     <url>/2024/10/26/compiler-impletment-learn-from-Jack-W-Crenshaw/</url>
     <content><![CDATA[<p>(教程连接)[<a href="https://compilers.iecc.com/crenshaw/]">https://compilers.iecc.com/crenshaw/]</a></p>
@@ -38,6 +27,17 @@
         <tag>68000 Assembly</tag>
         <tag>Jack W. Crenshaw</tag>
         <tag>compiler</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Next主题</title>
+    <url>/2024/10/05/hello-world/</url>
+    <content><![CDATA[<h2 id="指路Next入门教程"><a href="#指路Next入门教程" class="headerlink" title="指路Next入门教程"></a><a href="https://hexo-next.readthedocs.io/zh-cn/latest/next/">指路Next入门教程</a></h2>]]></content>
+      <categories>
+        <category>Hexo-Next</category>
+      </categories>
+      <tags>
+        <tag>Beautify</tag>
       </tags>
   </entry>
 </search>
