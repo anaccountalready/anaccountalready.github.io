@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>BugBlog</title>
-    <url>/2024/12/11/BugBlog/</url>
-    <content><![CDATA[<h1 id="problem"><a href="#problem" class="headerlink" title="problem"></a>problem</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//JAVA</span></span><br><span class="line"><span class="comment">// Wrong!!!,这样写改不了树，put不进去</span></span><br><span class="line"><span class="comment">//	public void NonrecursivePut(Key key,Value val)&#123;</span></span><br><span class="line"><span class="comment">//		if(key==null)throw new IllegalArgumentException(&quot;the 1st of Put() is null&quot;);</span></span><br><span class="line"><span class="comment">//		Node x = root;</span></span><br><span class="line"><span class="comment">//		while(x!=null)&#123;</span></span><br><span class="line"><span class="comment">//			int cmp = key.compareTo(x.key);</span></span><br><span class="line"><span class="comment">//			if(cmp&gt;0) x=x.right;</span></span><br><span class="line"><span class="comment">//			else if(cmp&lt;0) x= x.left;</span></span><br><span class="line"><span class="comment">//			else x.val=val;</span></span><br><span class="line"><span class="comment">//		&#125;</span></span><br><span class="line"><span class="comment">//		x=new Node(key,val);Wrong!!因为只是将临时引用指向了新创建的对象，而实际的x.left或x.right引用依然为null</span></span><br><span class="line"><span class="comment">//	&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Solution: 记录父节点，通过修改父节点.left和right进行</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>Bug</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Lean4</title>
     <url>/2024/12/31/Lean4/</url>
     <content><![CDATA[<p>Lean4：被称为交互式定理证明器（interactive theorem-proving system）的计算机系统（也称为证明助手或形式化系统）提供了另一种表达数学论证的方法。<br>mathlib(Lean mathematical library)是一项由社区推动的工作，旨在建立一个以lean proof assistant形式化的统一数学库。<br>a proof assistant：(一个软件，提供规范语言，依照规范语言定义对象和性质，证明定理，系统检查定理的正确性，直至逻辑基础)<br>Formalization:  我们将用一种规范的语言（如编程语言）来书写数学定义、定理和证明，让 Lean 能够理解。 作为回报，Lean 会提供反馈和信息，解释表达式并保证其格式正确，并最终认证我们证明的正确性。</p>
@@ -82,6 +71,17 @@
       </tags>
   </entry>
   <entry>
+    <title>Next主题</title>
+    <url>/2024/10/05/hello-world/</url>
+    <content><![CDATA[<h2 id="指路Next入门教程"><a href="#指路Next入门教程" class="headerlink" title="指路Next入门教程"></a><a href="https://hexo-next.readthedocs.io/zh-cn/latest/next/">指路Next入门教程</a></h2>]]></content>
+      <categories>
+        <category>Hexo-Next</category>
+      </categories>
+      <tags>
+        <tag>Beautify</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>compiler impletment learn from Jack W. Crenshaw</title>
     <url>/2024/10/26/compiler-impletment-learn-from-Jack-W-Crenshaw/</url>
     <content><![CDATA[<p><a href="https://compilers.iecc.com/crenshaw">学习网站</a></p>
@@ -118,14 +118,14 @@
       </tags>
   </entry>
   <entry>
-    <title>Next主题</title>
-    <url>/2024/10/05/hello-world/</url>
-    <content><![CDATA[<h2 id="指路Next入门教程"><a href="#指路Next入门教程" class="headerlink" title="指路Next入门教程"></a><a href="https://hexo-next.readthedocs.io/zh-cn/latest/next/">指路Next入门教程</a></h2>]]></content>
+    <title>BugBlog</title>
+    <url>/2024/12/11/BugBlog/</url>
+    <content><![CDATA[<h1 id="problem"><a href="#problem" class="headerlink" title="problem"></a>problem</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//JAVA</span></span><br><span class="line"><span class="comment">// Wrong!!!,这样写改不了树，put不进去</span></span><br><span class="line"><span class="comment">//	public void NonrecursivePut(Key key,Value val)&#123;</span></span><br><span class="line"><span class="comment">//		if(key==null)throw new IllegalArgumentException(&quot;the 1st of Put() is null&quot;);</span></span><br><span class="line"><span class="comment">//		Node x = root;</span></span><br><span class="line"><span class="comment">//		while(x!=null)&#123;</span></span><br><span class="line"><span class="comment">//			int cmp = key.compareTo(x.key);</span></span><br><span class="line"><span class="comment">//			if(cmp&gt;0) x=x.right;</span></span><br><span class="line"><span class="comment">//			else if(cmp&lt;0) x= x.left;</span></span><br><span class="line"><span class="comment">//			else x.val=val;</span></span><br><span class="line"><span class="comment">//		&#125;</span></span><br><span class="line"><span class="comment">//		x=new Node(key,val);Wrong!!因为只是将临时引用指向了新创建的对象，而实际的x.left或x.right引用依然为null</span></span><br><span class="line"><span class="comment">//	&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Solution: 记录父节点，通过修改父节点.left和right进行</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>Hexo-Next</category>
+        <category>JAVA</category>
       </categories>
       <tags>
-        <tag>Beautify</tag>
+        <tag>Bug</tag>
       </tags>
   </entry>
   <entry>
