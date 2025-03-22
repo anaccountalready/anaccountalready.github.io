@@ -20,25 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"anaccountalready.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Come to Play">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HelloWorld">
-<meta property="og:url" content="https://anaccountalready.github.io/categories/Linear-Algebra/index.html">
+    <meta name="description" content="具有向量空间结构意味着具有加法交换群 代码结构 基础概念Basis（基础）  Dimension（维数） FiniteDimensional（有限维） FiniteDimensional.lean（有限维.lean） FiniteSpan.lean（有限生成.lean） Span（张成） StdBasis.lean（标准基.lean）  矩阵与行列式Matrix（矩阵）  Determinant.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mathlib4_source_code_LinearAlgebra">
+<meta property="og:url" content="https://anaccountalready.github.io/2025/02/07/mathlib4-source-code-LinearAlgebra/index.html">
 <meta property="og:site_name" content="HelloWorld">
-<meta property="og:description" content="Come to Play">
+<meta property="og:description" content="具有向量空间结构意味着具有加法交换群 代码结构 基础概念Basis（基础）  Dimension（维数） FiniteDimensional（有限维） FiniteDimensional.lean（有限维.lean） FiniteSpan.lean（有限生成.lean） Span（张成） StdBasis.lean（标准基.lean）  矩阵与行列式Matrix（矩阵）  Determinant.">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-02-07T14:35:00.000Z">
+<meta property="article:modified_time" content="2025-02-12T15:43:32.541Z">
 <meta property="article:author" content="Yu">
+<meta property="article:tag" content="Linear Algebra">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://anaccountalready.github.io/categories/Linear-Algebra/">
+<link rel="canonical" href="https://anaccountalready.github.io/2025/02/07/mathlib4-source-code-LinearAlgebra/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"categories/Linear-Algebra/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://anaccountalready.github.io/2025/02/07/mathlib4-source-code-LinearAlgebra/","path":"2025/02/07/mathlib4-source-code-LinearAlgebra/","title":"mathlib4_source_code_LinearAlgebra"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>分类: Linear Algebra | HelloWorld</title>
+<title>mathlib4_source_code_LinearAlgebra | HelloWorld</title>
   
 
 
@@ -125,7 +128,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -138,6 +141,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">代码结构</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -187,51 +191,216 @@
 
     </div>
 
-    <div class="main-inner category posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">Linear Algebra
-          <small>分类</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://anaccountalready.github.io/2025/02/07/mathlib4-source-code-LinearAlgebra/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1.jpg">
+      <meta itemprop="name" content="Yu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HelloWorld">
+      <meta itemprop="description" content="Come to Play">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="mathlib4_source_code_LinearAlgebra | HelloWorld">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          mathlib4_source_code_LinearAlgebra
         </h1>
-      </div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2025</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-02-07 22:35:00" itemprop="dateCreated datePublished" datetime="2025-02-07T22:35:00+08:00">2025-02-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-02-12 23:43:32" itemprop="dateModified" datetime="2025-02-12T23:43:32+08:00">2025-02-12</time>
+    </span>
+
+  
+    <span id="/2025/02/07/mathlib4-source-code-LinearAlgebra/" class="post-meta-item leancloud_visitors" data-flag-title="mathlib4_source_code_LinearAlgebra" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2025/02/07/mathlib4-source-code-LinearAlgebra/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2025/02/07/mathlib4-source-code-LinearAlgebra/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>392</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>具有向量空间结构意味着具有加法交换群</p>
+<h1 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h1><ol>
+<li>基础概念<br>Basis（基础）</li>
+</ol>
+<p>Dimension（维数）</p>
+<p>FiniteDimensional（有限维）</p>
+<p>FiniteDimensional.lean（有限维.lean）</p>
+<p>FiniteSpan.lean（有限生成.lean）</p>
+<p>Span（张成）</p>
+<p>StdBasis.lean（标准基.lean）</p>
+<ol start="3">
+<li>矩阵与行列式<br>Matrix（矩阵）</li>
+</ol>
+<p>Determinant.lean（行列式.lean）</p>
+<p>Vandermonde.lean（范德蒙行列式.lean）</p>
+<p>Charpoly（特征多项式）</p>
+<p>Trace.lean（迹.lean）</p>
+<ol start="2">
+<li>线性映射与线性空间<br>LinearIndependent.lean（线性无关.lean）</li>
+</ol>
+<p>LinearDisjoint.lean（线性无关.lean）</p>
+<p>LinearPMap.lean（线性投影映射.lean）</p>
+<p>Isomorphisms.lean（同构.lean）</p>
+<p>Quotient（商）</p>
+<p>AffineSpace（仿射空间）</p>
+<ol start="4">
+<li>双线性形式与二次型<br>BilinearForm（双线性形式）</li>
+</ol>
+<p>BilinearMap.lean（双线性映射.lean）</p>
+<p>QuadraticForm（二次型）</p>
+<p>SesquilinearForm.lean（半双线性型.lean）</p>
+<ol start="6">
+<li>特征值与特征空间<br>Eigenspace（特征空间）</li>
+</ol>
+<p>AnnihilatingPolynomial.lean（零化多项式.lean）</p>
+<p>JordanChevalley.lean（约当-舍瓦莱.lean）</p>
+<ol start="5">
+<li>张量积与外代数<br>TensorProduct（张量积）</li>
+</ol>
+<p>TensorAlgebra（张量代数）</p>
+<p>TensorPower（张量幂）</p>
+<p>ExteriorAlgebra（外代数）</p>
+<p>ExteriorPower（外幂）</p>
+<p>PiTensorProduct.lean（π张量积.lean）</p>
+<ol start="7">
+<li>群与表示<br>GeneralLinearGroup.lean（一般线性群.lean）</li>
+</ol>
+<p>SymplecticGroup.lean（辛群.lean）</p>
+<p>UnitaryGroup.lean（酉群.lean）</p>
+<p>RootSystem（根系）</p>
+<p>Reflection.lean（反射.lean）</p>
+<ol start="8">
+<li>特殊结构与定理<br>Alternating（交错）</li>
+</ol>
+<p>CliffordAlgebra（克利福德代数）</p>
+<p>DirectSum（直和）</p>
+<p>FreeModule（自由模）</p>
+<p>FreeAlgebra.lean（自由代数.lean）</p>
+<p>FreeProduct（自由积）</p>
+<p>InvariantBasisNumber.lean（不变基数.lean）</p>
+<p>PID.lean（主理想整环.lean）</p>
+<p>Semisimple.lean（半单.lean）</p>
+<ol start="9">
+<li>几何与投影<br>Projectivization（射影化）</li>
+</ol>
+<p>Projection.lean（投影.lean）</p>
+<p>Orientation.lean（定向.lean）</p>
+<p>Ray.lean（射线.lean）</p>
+<ol start="10">
+<li>其他工具与辅助模块<br>DFinsupp.lean（有限支撑函数.lean）</li>
+</ol>
+<p>Finsupp（有限支撑）</p>
+<p>Pi.lean（π.lean）</p>
+<p>Prod.lean（积.lean）</p>
+<p>Countable.lean（可数.lean）</p>
+<p>Goursat.lean（古尔萨.lean）</p>
+<p>Lagrange.lean（拉格朗日.lean）</p>
+<p>PerfectPairing（完美配对）</p>
+<p>SModEq.lean（模同余.lean）</p>
+<p>Coevaluation.lean（余评估.lean）</p>
+<p>Contraction.lean（收缩.lean）</p>
+<p>CrossProduct.lean（叉积.lean）</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2025-01-31T22:06:11+08:00"
-              content="2025-01-31">
-          01-31
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2025/01/31/Liner-Algebra/" itemprop="url">
-            <span itemprop="name">Liner_Algebra</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Linear-Algebra/" rel="tag"># Linear Algebra</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/01/31/Liner-Algebra/" rel="prev" title="Liner_Algebra">
+                  <i class="fa fa-angle-left"></i> Liner_Algebra
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-    </div>
-  </div>
-  
-  
-  
 
+
+
+
+
+    <div class="comments" id="waline"></div>
 </div>
   </main>
 
@@ -309,7 +478,7 @@
   <script src="/js/third-party/statistics/lean-analytics.js"></script>
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://www.anaccountalready.cn","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"locale":{"placeholder":"Welcome to comment"},"placeholder":null,"avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":false,"comment_count":false,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/categories/Linear-Algebra/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://www.anaccountalready.cn","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"locale":{"placeholder":"Welcome to comment"},"placeholder":null,"avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":false,"comment_count":false,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2025/02/07/mathlib4-source-code-LinearAlgebra/"}</script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {
