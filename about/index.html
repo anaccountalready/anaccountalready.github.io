@@ -152,18 +152,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -188,6 +188,167 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://anaccountalready.github.io/2025/10/31/OS-knowledge/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1.jpg">
+      <meta itemprop="name" content="Yu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HelloWorld">
+      <meta itemprop="description" content="Come to Play">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | HelloWorld">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/10/31/OS-knowledge/" class="post-title-link" itemprop="url">OS_knowledge</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2025-10-31 22:14:08 / 修改时间：23:27:06" itemprop="dateCreated datePublished" datetime="2025-10-31T22:14:08+08:00">2025-10-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/OS/" itemprop="url" rel="index"><span itemprop="name">OS</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2025/10/31/OS-knowledge/" class="post-meta-item leancloud_visitors" data-flag-title="OS_knowledge" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2025/10/31/OS-knowledge/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2025/10/31/OS-knowledge/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="操作系统的内存管理"><a href="#操作系统的内存管理" class="headerlink" title="操作系统的内存管理"></a>操作系统的内存管理</h1><h2 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h2><h3 id="为什么要有虚拟内存？"><a href="#为什么要有虚拟内存？" class="headerlink" title="为什么要有虚拟内存？"></a>为什么要有虚拟内存？</h3><p>没有虚拟内存时，进程共享物理内存，当进程加载到物理内存时，会出现三个问题：</p>
+<ol>
+<li><strong>物理内存没有足够的空间可以容纳进程</strong></li>
+</ol>
+<ul>
+<li>设想进程是否可以有一块更大的内存空间？</li>
+</ul>
+<ol start="2">
+<li><strong>物理内存碎片化</strong></li>
+</ol>
+<ul>
+<li>碎片化为内存中没有一块连续的空间能够容纳进程。由此可以推出一种设想，是否可以让进程在不连续的物理内存中运行？场景：数组，因为数组为连续索引，因此需要使用新的索引机制，即虚拟内存，通过映射关系实现重新索引。</li>
+</ul>
+<ol start="3">
+<li><strong>物理内存为进程共有，会导致不同进程访问修改同一物理内存的数据</strong></li>
+</ol>
+<ul>
+<li>设想每个进程是否可以有自己独立的内存空间，实现内存隔离？</li>
+</ul>
+<p>综上，引入虚拟内存，假设每个进程都有自己的虚拟空间，该虚拟空间大于物理内存，这样就实现了内存隔离和内存连续。虚拟内存通过某种映射对应物理内存。</p>
+<h3 id="虚拟内存是什么？"><a href="#虚拟内存是什么？" class="headerlink" title="虚拟内存是什么？"></a>虚拟内存是什么？</h3><p>虚拟内存是每个进程假想的内存空间，通过映射关系与物理内存对应。该映射关系存储在RAM物理内存中，称为PT（Page Table），PTE（Page Table Entry）表示映射关系。</p>
+<ol>
+<li>PTE的大小是多大？</li>
+</ol>
+<h4 id="映射关系（虚拟地址到物理地址的翻译）"><a href="#映射关系（虚拟地址到物理地址的翻译）" class="headerlink" title="映射关系（虚拟地址到物理地址的翻译）"></a>映射关系（虚拟地址到物理地址的翻译）</h4><p>前提：CPU处理数据的基本单位是 1 Word &#x3D; 4 Byte？？？</p>
+<p>假设：虚拟内存是$4GB$。物理内存RAM是$2GB$；</p>
+<p>问题：存储PT需要多大空间？</p>
+<ul>
+<li><p>按Word为单位映射：<br>虚拟内存有$2^{32}B$ ，对应$2^{30}$个PTE，PTE中需要存储虚拟地址和物理地址的映射关系4B。则一个进程的PTE占据4GB物理内存空间。</p>
+</li>
+<li><p>按Page为单位映射（此处Page大小为$4KB$）：<br>虚拟内存有$2^{32}B$ ，对应$2^{20}$个PTE，PTE中需要存储虚拟地址和物理地址的映射关系4B。则一个进程的PT占据4MB物理内存空间。</p>
+<ul>
+<li><p>虚拟页的虚拟地址在进行翻译时，会遇到PTE中描述该虚拟页对应的内容在磁盘上，此时CPU会抛出异常Page Fault（缺页异常），引发中断，CPU的控制权由用户转到内核，操作系统处理异常，操作系统会根据页置换算法，从物理内存中选出一个没用的页P，如果页P被修改过(脏页)，则操作系统会将其写回磁盘后将其驱逐出物理内存，然后将磁盘内容放到物理页上，并修改PT中的PTE，恢复中断，CPU重新运行缺页指令。</p>
+<ul>
+<li>这个过程非常缓慢。优化如下：在磁盘和物理内存之间加一个硬件DMA，当CPU处理其他任务时，直接将页从磁盘加载到内存。<strong>PTE中虚拟地址对应DISK这个关系是怎么表现的？因为如果在PT中没有该PTE就永远无法得知。</strong></li>
+</ul>
+</li>
+<li><p>地址翻译到数据访问过程需要访问2次物理内存：访问PT + 访问数据，也很慢，优化：在CPU和物理内存之间加一个硬件TLB（Translation Look Aside buffer）。TLB用于缓存虚拟地址到物理地址的映射。TLB的查询时间小于一个clock。TLB分为ITLB和DTLB（指令和数据），一个TLB有4096个entry，但是由于数据的局部性原理，实践中TLB效果较好。为了优化，可以再增加一个TLB，像DMA模块机制一样，将页面地址直接从RAM加载到TLB中，无需返回操作系统。</p>
+</li>
+<li><p>当多个进程时，所有进程的PT存在物理内存中也需要占据很大的空间。</p>
+</li>
+</ul>
+</li>
+<li><p>多级页表：<br>如果只有一级页表，则PT占据的物理内存空间不能被放到磁盘，因为PT负责物理内存和虚拟内存的翻译功能。为了使得页表也可以交换到磁盘，可以增加二级页表。</p>
+</li>
+</ul>
+<p>负责地址翻译和生成Page Fault的硬件为MMU，在CPU主板上，由操作系统编程。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -233,7 +394,16 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-02-12 23:43:32" itemprop="dateModified" datetime="2025-02-12T23:43:32+08:00">2025-02-12</time>
+      <time title="修改时间：2025-10-31 22:15:01" itemprop="dateModified" datetime="2025-10-31T22:15:01+08:00">2025-10-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Lean/" itemprop="url" rel="index"><span itemprop="name">Lean</span></a>
+        </span>
     </span>
 
   
@@ -1000,7 +1170,16 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-03-09 13:08:52" itemprop="dateModified" datetime="2025-03-09T13:08:52+08:00">2025-03-09</time>
+      <time title="修改时间：2025-10-31 22:15:16" itemprop="dateModified" datetime="2025-10-31T22:15:16+08:00">2025-10-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Lean/" itemprop="url" rel="index"><span itemprop="name">Lean</span></a>
+        </span>
     </span>
 
   
@@ -1476,13 +1655,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">6k</span>
+    <span title="站点总字数">7k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">19 分钟</span>
+    <span title="站点阅读时长">22 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动

@@ -20,30 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"anaccountalready.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="problem123456789101112131415&#x2F;&#x2F;JAVA&#x2F;&#x2F; Wrong!!!,这样写改不了树，put不进去&#x2F;&#x2F;	public void NonrecursivePut(Key key,Value val)&#123;&#x2F;&#x2F;		if(key&#x3D;&#x3D;null)throw new IllegalArgumentException(&quot;the 1st of Put() is null&amp;qu">
+    <meta name="description" content="操作系统的内存管理虚拟内存为什么要有虚拟内存？没有虚拟内存时，进程共享物理内存，当进程加载到物理内存时，会出现三个问题：  物理内存没有足够的空间可以容纳进程   设想进程是否可以有一块更大的内存空间？   物理内存碎片化   碎片化为内存中没有一块连续的空间能够容纳进程。由此可以推出一种设想，是否可以让进程在不连续的物理内存中运行？场景：数组，因为数组为连续索引，因此需要使用新的索引机制，即虚拟">
 <meta property="og:type" content="article">
-<meta property="og:title" content="BugBlog">
-<meta property="og:url" content="https://anaccountalready.github.io/2024/12/11/BugBlog/index.html">
+<meta property="og:title" content="OS_knowledge">
+<meta property="og:url" content="https://anaccountalready.github.io/2025/10/31/OS-knowledge/index.html">
 <meta property="og:site_name" content="HelloWorld">
-<meta property="og:description" content="problem123456789101112131415&#x2F;&#x2F;JAVA&#x2F;&#x2F; Wrong!!!,这样写改不了树，put不进去&#x2F;&#x2F;	public void NonrecursivePut(Key key,Value val)&#123;&#x2F;&#x2F;		if(key&#x3D;&#x3D;null)throw new IllegalArgumentException(&quot;the 1st of Put() is null&amp;qu">
+<meta property="og:description" content="操作系统的内存管理虚拟内存为什么要有虚拟内存？没有虚拟内存时，进程共享物理内存，当进程加载到物理内存时，会出现三个问题：  物理内存没有足够的空间可以容纳进程   设想进程是否可以有一块更大的内存空间？   物理内存碎片化   碎片化为内存中没有一块连续的空间能够容纳进程。由此可以推出一种设想，是否可以让进程在不连续的物理内存中运行？场景：数组，因为数组为连续索引，因此需要使用新的索引机制，即虚拟">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://anaccountalready.github.io/hexoLeancloudCounterSecurity.png">
-<meta property="article:published_time" content="2024-12-11T09:01:51.000Z">
-<meta property="article:modified_time" content="2025-10-31T13:53:55.346Z">
+<meta property="article:published_time" content="2025-10-31T14:14:08.000Z">
+<meta property="article:modified_time" content="2025-10-31T15:27:06.795Z">
 <meta property="article:author" content="Yu">
-<meta property="article:tag" content="Bug">
+<meta property="article:tag" content="OS">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://anaccountalready.github.io/hexoLeancloudCounterSecurity.png">
 
 
-<link rel="canonical" href="https://anaccountalready.github.io/2024/12/11/BugBlog/">
+<link rel="canonical" href="https://anaccountalready.github.io/2025/10/31/OS-knowledge/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://anaccountalready.github.io/2024/12/11/BugBlog/","path":"2024/12/11/BugBlog/","title":"BugBlog"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://anaccountalready.github.io/2025/10/31/OS-knowledge/","path":"2025/10/31/OS-knowledge/","title":"OS_knowledge"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>BugBlog | HelloWorld</title>
+<title>OS_knowledge | HelloWorld</title>
   
 
 
@@ -143,7 +141,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#problem"><span class="nav-number">1.</span> <span class="nav-text">problem</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">操作系统的内存管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98"><span class="nav-number">1.1.</span> <span class="nav-text">虚拟内存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%9C%89%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%EF%BC%9F"><span class="nav-number">1.1.1.</span> <span class="nav-text">为什么要有虚拟内存？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-number">1.1.2.</span> <span class="nav-text">虚拟内存是什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB%EF%BC%88%E8%99%9A%E6%8B%9F%E5%9C%B0%E5%9D%80%E5%88%B0%E7%89%A9%E7%90%86%E5%9C%B0%E5%9D%80%E7%9A%84%E7%BF%BB%E8%AF%91%EF%BC%89"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">映射关系（虚拟地址到物理地址的翻译）</span></a></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -204,7 +202,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://anaccountalready.github.io/2024/12/11/BugBlog/">
+    <link itemprop="mainEntityOfPage" href="https://anaccountalready.github.io/2025/10/31/OS-knowledge/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/1.jpg">
@@ -217,12 +215,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="BugBlog | HelloWorld">
+      <meta itemprop="name" content="OS_knowledge | HelloWorld">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          BugBlog
+          OS_knowledge
         </h1>
 
         <div class="post-meta-container">
@@ -232,15 +230,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2024-12-11 17:01:51" itemprop="dateCreated datePublished" datetime="2024-12-11T17:01:51+08:00">2024-12-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-10-31 21:53:55" itemprop="dateModified" datetime="2025-10-31T21:53:55+08:00">2025-10-31</time>
+      <time title="创建时间：2025-10-31 22:14:08 / 修改时间：23:27:06" itemprop="dateCreated datePublished" datetime="2025-10-31T22:14:08+08:00">2025-10-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -248,12 +240,12 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a>
+          <a href="/categories/OS/" itemprop="url" rel="index"><span itemprop="name">OS</span></a>
         </span>
     </span>
 
   
-    <span id="/2024/12/11/BugBlog/" class="post-meta-item leancloud_visitors" data-flag-title="BugBlog" title="阅读次数">
+    <span id="/2025/10/31/OS-knowledge/" class="post-meta-item leancloud_visitors" data-flag-title="OS_knowledge" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -268,8 +260,8 @@
     </span>
     <span class="post-meta-item-text">Waline：</span>
   
-    <a title="waline" href="/2024/12/11/BugBlog/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/2024/12/11/BugBlog/" itemprop="commentCount"></span>
+    <a title="waline" href="/2025/10/31/OS-knowledge/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2025/10/31/OS-knowledge/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -280,14 +272,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>7</span>
+      <span>1.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -297,8 +289,53 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="problem"><a href="#problem" class="headerlink" title="problem"></a>problem</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//JAVA</span></span><br><span class="line"><span class="comment">// Wrong!!!,这样写改不了树，put不进去</span></span><br><span class="line"><span class="comment">//	public void NonrecursivePut(Key key,Value val)&#123;</span></span><br><span class="line"><span class="comment">//		if(key==null)throw new IllegalArgumentException(&quot;the 1st of Put() is null&quot;);</span></span><br><span class="line"><span class="comment">//		Node x = root;</span></span><br><span class="line"><span class="comment">//		while(x!=null)&#123;</span></span><br><span class="line"><span class="comment">//			int cmp = key.compareTo(x.key);</span></span><br><span class="line"><span class="comment">//			if(cmp&gt;0) x=x.right;</span></span><br><span class="line"><span class="comment">//			else if(cmp&lt;0) x= x.left;</span></span><br><span class="line"><span class="comment">//			else x.val=val;</span></span><br><span class="line"><span class="comment">//		&#125;</span></span><br><span class="line"><span class="comment">//		x=new Node(key,val);Wrong!!因为只是将临时引用指向了新创建的对象，而实际的x.left或x.right引用依然为null</span></span><br><span class="line"><span class="comment">//	&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Solution: 记录父节点，通过修改父节点.left和right进行</span></span><br></pre></td></tr></table></figure>
-<p><img src="/hexoLeancloudCounterSecurity.png" alt="hexo-leancloud-counter-security报错"></p>
+    <div class="post-body" itemprop="articleBody"><h1 id="操作系统的内存管理"><a href="#操作系统的内存管理" class="headerlink" title="操作系统的内存管理"></a>操作系统的内存管理</h1><h2 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h2><h3 id="为什么要有虚拟内存？"><a href="#为什么要有虚拟内存？" class="headerlink" title="为什么要有虚拟内存？"></a>为什么要有虚拟内存？</h3><p>没有虚拟内存时，进程共享物理内存，当进程加载到物理内存时，会出现三个问题：</p>
+<ol>
+<li><strong>物理内存没有足够的空间可以容纳进程</strong></li>
+</ol>
+<ul>
+<li>设想进程是否可以有一块更大的内存空间？</li>
+</ul>
+<ol start="2">
+<li><strong>物理内存碎片化</strong></li>
+</ol>
+<ul>
+<li>碎片化为内存中没有一块连续的空间能够容纳进程。由此可以推出一种设想，是否可以让进程在不连续的物理内存中运行？场景：数组，因为数组为连续索引，因此需要使用新的索引机制，即虚拟内存，通过映射关系实现重新索引。</li>
+</ul>
+<ol start="3">
+<li><strong>物理内存为进程共有，会导致不同进程访问修改同一物理内存的数据</strong></li>
+</ol>
+<ul>
+<li>设想每个进程是否可以有自己独立的内存空间，实现内存隔离？</li>
+</ul>
+<p>综上，引入虚拟内存，假设每个进程都有自己的虚拟空间，该虚拟空间大于物理内存，这样就实现了内存隔离和内存连续。虚拟内存通过某种映射对应物理内存。</p>
+<h3 id="虚拟内存是什么？"><a href="#虚拟内存是什么？" class="headerlink" title="虚拟内存是什么？"></a>虚拟内存是什么？</h3><p>虚拟内存是每个进程假想的内存空间，通过映射关系与物理内存对应。该映射关系存储在RAM物理内存中，称为PT（Page Table），PTE（Page Table Entry）表示映射关系。</p>
+<ol>
+<li>PTE的大小是多大？</li>
+</ol>
+<h4 id="映射关系（虚拟地址到物理地址的翻译）"><a href="#映射关系（虚拟地址到物理地址的翻译）" class="headerlink" title="映射关系（虚拟地址到物理地址的翻译）"></a>映射关系（虚拟地址到物理地址的翻译）</h4><p>前提：CPU处理数据的基本单位是 1 Word &#x3D; 4 Byte？？？</p>
+<p>假设：虚拟内存是$4GB$。物理内存RAM是$2GB$；</p>
+<p>问题：存储PT需要多大空间？</p>
+<ul>
+<li><p>按Word为单位映射：<br>虚拟内存有$2^{32}B$ ，对应$2^{30}$个PTE，PTE中需要存储虚拟地址和物理地址的映射关系4B。则一个进程的PTE占据4GB物理内存空间。</p>
+</li>
+<li><p>按Page为单位映射（此处Page大小为$4KB$）：<br>虚拟内存有$2^{32}B$ ，对应$2^{20}$个PTE，PTE中需要存储虚拟地址和物理地址的映射关系4B。则一个进程的PT占据4MB物理内存空间。</p>
+<ul>
+<li><p>虚拟页的虚拟地址在进行翻译时，会遇到PTE中描述该虚拟页对应的内容在磁盘上，此时CPU会抛出异常Page Fault（缺页异常），引发中断，CPU的控制权由用户转到内核，操作系统处理异常，操作系统会根据页置换算法，从物理内存中选出一个没用的页P，如果页P被修改过(脏页)，则操作系统会将其写回磁盘后将其驱逐出物理内存，然后将磁盘内容放到物理页上，并修改PT中的PTE，恢复中断，CPU重新运行缺页指令。</p>
+<ul>
+<li>这个过程非常缓慢。优化如下：在磁盘和物理内存之间加一个硬件DMA，当CPU处理其他任务时，直接将页从磁盘加载到内存。<strong>PTE中虚拟地址对应DISK这个关系是怎么表现的？因为如果在PT中没有该PTE就永远无法得知。</strong></li>
+</ul>
+</li>
+<li><p>地址翻译到数据访问过程需要访问2次物理内存：访问PT + 访问数据，也很慢，优化：在CPU和物理内存之间加一个硬件TLB（Translation Look Aside buffer）。TLB用于缓存虚拟地址到物理地址的映射。TLB的查询时间小于一个clock。TLB分为ITLB和DTLB（指令和数据），一个TLB有4096个entry，但是由于数据的局部性原理，实践中TLB效果较好。为了优化，可以再增加一个TLB，像DMA模块机制一样，将页面地址直接从RAM加载到TLB中，无需返回操作系统。</p>
+</li>
+<li><p>当多个进程时，所有进程的PT存在物理内存中也需要占据很大的空间。</p>
+</li>
+</ul>
+</li>
+<li><p>多级页表：<br>如果只有一级页表，则PT占据的物理内存空间不能被放到磁盘，因为PT负责物理内存和虚拟内存的翻译功能。为了使得页表也可以交换到磁盘，可以增加二级页表。</p>
+</li>
+</ul>
+<p>负责地址翻译和生成Page Fault的硬件为MMU，在CPU主板上，由操作系统编程。</p>
 
     </div>
 
@@ -308,21 +345,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Bug/" rel="tag"># Bug</a>
+              <a href="/tags/OS/" rel="tag"># OS</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2024/10/26/compiler-impletment-learn-from-Jack-W-Crenshaw/" rel="prev" title="compiler impletment learn from Jack W. Crenshaw">
-                  <i class="fa fa-angle-left"></i> compiler impletment learn from Jack W. Crenshaw
+                <a href="/2025/02/07/mathlib4-source-code-LinearAlgebra/" rel="prev" title="mathlib4_source_code_LinearAlgebra">
+                  <i class="fa fa-angle-left"></i> mathlib4_source_code_LinearAlgebra
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2024/12/31/Lean4/" rel="next" title="Lean4">
-                  Lean4 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -412,7 +446,7 @@
   <script src="/js/third-party/statistics/lean-analytics.js"></script>
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://www.anaccountalready.cn","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"locale":{"placeholder":"Welcome to comment"},"placeholder":null,"avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":false,"comment_count":false,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2024/12/11/BugBlog/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://www.anaccountalready.cn","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"locale":{"placeholder":"Welcome to comment"},"placeholder":null,"avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":false,"comment_count":false,"requiredFields":["nick"],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2025/10/31/OS-knowledge/"}</script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {
