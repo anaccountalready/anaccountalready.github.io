@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>BugBlog</title>
-    <url>/2024/12/11/BugBlog/</url>
-    <content><![CDATA[<h1 id="problem"><a href="#problem" class="headerlink" title="problem"></a>problem</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//JAVA</span></span><br><span class="line"><span class="comment">// Wrong!!!,这样写改不了树，put不进去</span></span><br><span class="line"><span class="comment">//	public void NonrecursivePut(Key key,Value val)&#123;</span></span><br><span class="line"><span class="comment">//		if(key==null)throw new IllegalArgumentException(&quot;the 1st of Put() is null&quot;);</span></span><br><span class="line"><span class="comment">//		Node x = root;</span></span><br><span class="line"><span class="comment">//		while(x!=null)&#123;</span></span><br><span class="line"><span class="comment">//			int cmp = key.compareTo(x.key);</span></span><br><span class="line"><span class="comment">//			if(cmp&gt;0) x=x.right;</span></span><br><span class="line"><span class="comment">//			else if(cmp&lt;0) x= x.left;</span></span><br><span class="line"><span class="comment">//			else x.val=val;</span></span><br><span class="line"><span class="comment">//		&#125;</span></span><br><span class="line"><span class="comment">//		x=new Node(key,val);Wrong!!因为只是将临时引用指向了新创建的对象，而实际的x.left或x.right引用依然为null</span></span><br><span class="line"><span class="comment">//	&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Solution: 记录父节点，通过修改父节点.left和right进行</span></span><br></pre></td></tr></table></figure>
-<p><img src="/hexoLeancloudCounterSecurity.png" alt="hexo-leancloud-counter-security报错"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>Bug</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>How_To_ASK_QUESITION_SMART_WAY</title>
     <url>/2026/01/10/How-To-ASK-QUESITION-SMART-WAY/</url>
     <content><![CDATA[<h1 id="资源链"><a href="#资源链" class="headerlink" title="资源链"></a>资源链</h1><p><a href="http://stackexchange.com/sites">Q&amp;A siteS: stack exchange</a></p>
@@ -37,12 +24,16 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA_Knowledge</title>
-    <url>/2025/11/01/JAVA-Knowledge/</url>
-    <content><![CDATA[<h1 id="Introdutino-to-Garbage-Collection-Tuning"><a href="#Introdutino-to-Garbage-Collection-Tuning" class="headerlink" title="Introdutino to Garbage Collection Tuning"></a>Introdutino to Garbage Collection Tuning</h1><p>JAVA SE </p>
+    <title>BugBlog</title>
+    <url>/2024/12/11/BugBlog/</url>
+    <content><![CDATA[<h1 id="problem"><a href="#problem" class="headerlink" title="problem"></a>problem</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//JAVA</span></span><br><span class="line"><span class="comment">// Wrong!!!,这样写改不了树，put不进去</span></span><br><span class="line"><span class="comment">//	public void NonrecursivePut(Key key,Value val)&#123;</span></span><br><span class="line"><span class="comment">//		if(key==null)throw new IllegalArgumentException(&quot;the 1st of Put() is null&quot;);</span></span><br><span class="line"><span class="comment">//		Node x = root;</span></span><br><span class="line"><span class="comment">//		while(x!=null)&#123;</span></span><br><span class="line"><span class="comment">//			int cmp = key.compareTo(x.key);</span></span><br><span class="line"><span class="comment">//			if(cmp&gt;0) x=x.right;</span></span><br><span class="line"><span class="comment">//			else if(cmp&lt;0) x= x.left;</span></span><br><span class="line"><span class="comment">//			else x.val=val;</span></span><br><span class="line"><span class="comment">//		&#125;</span></span><br><span class="line"><span class="comment">//		x=new Node(key,val);Wrong!!因为只是将临时引用指向了新创建的对象，而实际的x.left或x.right引用依然为null</span></span><br><span class="line"><span class="comment">//	&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Solution: 记录父节点，通过修改父节点.left和right进行</span></span><br></pre></td></tr></table></figure>
+<p><img src="/hexoLeancloudCounterSecurity.png" alt="hexo-leancloud-counter-security报错"></p>
 ]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
       <tags>
-        <tag>JAVA</tag>
+        <tag>Bug</tag>
       </tags>
   </entry>
   <entry>
@@ -59,6 +50,15 @@
       </categories>
       <tags>
         <tag>Lean</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA_Knowledge</title>
+    <url>/2025/11/01/JAVA-Knowledge/</url>
+    <content><![CDATA[<h1 id="Introdutino-to-Garbage-Collection-Tuning"><a href="#Introdutino-to-Garbage-Collection-Tuning" class="headerlink" title="Introdutino to Garbage Collection Tuning"></a>Introdutino to Garbage Collection Tuning</h1><p>JAVA SE </p>
+]]></content>
+      <tags>
+        <tag>JAVA</tag>
       </tags>
   </entry>
   <entry>
