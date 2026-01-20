@@ -24,28 +24,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JAVA_Knowledge</title>
-    <url>/2025/11/01/JAVA-Knowledge/</url>
-    <content><![CDATA[<h1 id="Introdutino-to-Garbage-Collection-Tuning"><a href="#Introdutino-to-Garbage-Collection-Tuning" class="headerlink" title="Introdutino to Garbage Collection Tuning"></a>Introdutino to Garbage Collection Tuning</h1><p>JAVA SE </p>
-]]></content>
-      <tags>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>BugBlog</title>
-    <url>/2024/12/11/BugBlog/</url>
-    <content><![CDATA[<h1 id="problem"><a href="#problem" class="headerlink" title="problem"></a>problem</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//JAVA</span></span><br><span class="line"><span class="comment">// Wrong!!!,这样写改不了树，put不进去</span></span><br><span class="line"><span class="comment">//	public void NonrecursivePut(Key key,Value val)&#123;</span></span><br><span class="line"><span class="comment">//		if(key==null)throw new IllegalArgumentException(&quot;the 1st of Put() is null&quot;);</span></span><br><span class="line"><span class="comment">//		Node x = root;</span></span><br><span class="line"><span class="comment">//		while(x!=null)&#123;</span></span><br><span class="line"><span class="comment">//			int cmp = key.compareTo(x.key);</span></span><br><span class="line"><span class="comment">//			if(cmp&gt;0) x=x.right;</span></span><br><span class="line"><span class="comment">//			else if(cmp&lt;0) x= x.left;</span></span><br><span class="line"><span class="comment">//			else x.val=val;</span></span><br><span class="line"><span class="comment">//		&#125;</span></span><br><span class="line"><span class="comment">//		x=new Node(key,val);Wrong!!因为只是将临时引用指向了新创建的对象，而实际的x.left或x.right引用依然为null</span></span><br><span class="line"><span class="comment">//	&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Solution: 记录父节点，通过修改父节点.left和right进行</span></span><br></pre></td></tr></table></figure>
-<p><img src="/hexoLeancloudCounterSecurity.png" alt="hexo-leancloud-counter-security报错"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>Bug</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Lean4</title>
     <url>/2024/12/31/Lean4/</url>
     <content><![CDATA[<p>Lean4：被称为交互式定理证明器（interactive theorem-proving system）的计算机系统（也称为证明助手或形式化系统）提供了另一种表达数学论证的方法。<br>mathlib(Lean mathematical library)是一项由社区推动的工作，旨在建立一个以lean proof assistant形式化的统一数学库。<br>a proof assistant：(一个软件，提供规范语言，依照规范语言定义对象和性质，证明定理，系统检查定理的正确性，直至逻辑基础)<br>Formalization:  我们将用一种规范的语言（如编程语言）来书写数学定义、定理和证明，让 Lean 能够理解。 作为回报，Lean 会提供反馈和信息，解释表达式并保证其格式正确，并最终认证我们证明的正确性。</p>
@@ -59,6 +37,19 @@
       </categories>
       <tags>
         <tag>Lean</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>BugBlog</title>
+    <url>/2024/12/11/BugBlog/</url>
+    <content><![CDATA[<h1 id="problem"><a href="#problem" class="headerlink" title="problem"></a>problem</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//JAVA</span></span><br><span class="line"><span class="comment">// Wrong!!!,这样写改不了树，put不进去</span></span><br><span class="line"><span class="comment">//	public void NonrecursivePut(Key key,Value val)&#123;</span></span><br><span class="line"><span class="comment">//		if(key==null)throw new IllegalArgumentException(&quot;the 1st of Put() is null&quot;);</span></span><br><span class="line"><span class="comment">//		Node x = root;</span></span><br><span class="line"><span class="comment">//		while(x!=null)&#123;</span></span><br><span class="line"><span class="comment">//			int cmp = key.compareTo(x.key);</span></span><br><span class="line"><span class="comment">//			if(cmp&gt;0) x=x.right;</span></span><br><span class="line"><span class="comment">//			else if(cmp&lt;0) x= x.left;</span></span><br><span class="line"><span class="comment">//			else x.val=val;</span></span><br><span class="line"><span class="comment">//		&#125;</span></span><br><span class="line"><span class="comment">//		x=new Node(key,val);Wrong!!因为只是将临时引用指向了新创建的对象，而实际的x.left或x.right引用依然为null</span></span><br><span class="line"><span class="comment">//	&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Solution: 记录父节点，通过修改父节点.left和right进行</span></span><br></pre></td></tr></table></figure>
+<p><img src="/hexoLeancloudCounterSecurity.png" alt="hexo-leancloud-counter-security报错"></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>Bug</tag>
       </tags>
   </entry>
   <entry>
@@ -82,6 +73,89 @@
       </categories>
       <tags>
         <tag>Linear Algebra</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JAVA_Knowledge</title>
+    <url>/2025/11/01/JAVA-Knowledge/</url>
+    <content><![CDATA[<h1 id="Introdutino-to-Garbage-Collection-Tuning"><a href="#Introdutino-to-Garbage-Collection-Tuning" class="headerlink" title="Introdutino to Garbage Collection Tuning"></a>Introdutino to Garbage Collection Tuning</h1><p>JAVA SE </p>
+]]></content>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mathematics_in_Lean</title>
+    <url>/2025/01/02/Mathematics-in-Lean/</url>
+    <content><![CDATA[<p>Mathematics in lean ：基于mathlib库，建造复杂表达式的方式：1.自己写，2.提供instruction 指导如何构建<br>Theorem Proving in Lean: 侧重底层逻辑框架和Lean的核心语法</p>
+<h1 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h1><h1 id="Linear-algebra写法"><a href="#Linear-algebra写法" class="headerlink" title="Linear algebra写法"></a>Linear algebra写法</h1><h2 id="2-basic"><a href="#2-basic" class="headerlink" title="2 basic"></a>2 basic</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-- le_div_iff₀这个theorem，以及rm[]</span><br><span class="line">-- 使用方面linarith(线性计算)，和ring(交换)</span><br><span class="line">-- 以及证明时可以把用的定理直接提出来，theorem</span><br><span class="line">-- have h:引入假设，calc 分步计算，让过程更加清晰，因为写出了要证明的每一步的结果</span><br><span class="line">-- tatics： apply , repeat</span><br></pre></td></tr></table></figure>
+<h2 id="3-1-Impication-and-the-Universal-Quantifier"><a href="#3-1-Impication-and-the-Universal-Quantifier" class="headerlink" title="3.1 Impication and the Universal Quantifier"></a>3.1 Impication and the Universal Quantifier</h2><p>In lean,in a sequence of implications there are implicit parentheses grouped to the right. </p>
+<p>it is common in Lean to use curly brackets to make quantified variables implicit when they can be inferred from subsequent hypotheses.So we can just do lemma to the hypothese without mentioning the objects.即用{}括起来的在调用时不需要显示指出。</p>
+<h2 id="5-2-Induction-and-Recursion"><a href="#5-2-Induction-and-Recursion" class="headerlink" title="5.2 Induction and Recursion"></a>5.2 Induction and Recursion</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-- 归纳</span><br><span class="line">-- inductive types (which are types generated infuctively by a given list of constructors)</span><br><span class="line">-- e.g. the natual numbers are declared as follows( in Prelude.lean)</span><br><span class="line">inductive Nat where</span><br><span class="line">  | zero : Nat -- constructor</span><br><span class="line">  | succ (n : Nat): Nat -- constructor</span><br><span class="line">---------------------------------------------------------</span><br><span class="line"></span><br><span class="line">@[simp] -- specifys that the defining equation should be added to the database of identities that the simplifier uses by default</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-1-Defining-Structures"><a href="#6-1-Defining-Structures" class="headerlink" title="6.1 Defining Structures"></a>6.1 Defining Structures</h2><p><code>structure</code> can specify not only <strong>data types</strong> but also <strong>constraints  that the data must satisfy(In lean,these are represented as fields of type <code>Prop</code>)</strong>.<br><code>def</code> 可以用来定义structure实例<br><code>subtype</code>类型({x: alpha &#x2F;&#x2F; p x}表示for all a in alpha，p x is true) construction combines a piece of data with a property.</p>
+<blockquote>
+<p>structure的好处：But even though we can use products, subtypes, and Sigma types instead of structures, using structures has a number of advantages. Defining a structure abstracts away the underlying representation and provides custom names for the functions that access the components. This makes proofs more robust: proofs that rely only on the interface to a structure will generally continue to work when we change the definition, as long as we redefine the old accessors in terms of the new definition. Moreover, as we are about to see, Lean provides support for weaving structures together into a rich, interconnected hierarchy, and for managing the interactions between them.</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">structure structure_name where</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+<h3 id="annotation-when-define-a-structure："><a href="#annotation-when-define-a-structure：" class="headerlink" title="annotation when define a structure："></a>annotation when define a structure：</h3><p><code>structure</code> can bundle together data,so as the <code>and符号</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-- 此注解表示自动生成定理: 当结构体的两个实例组成部分对应相同时，这两个实例相等</span><br><span class="line">@[ext] -- extensionality,tells Lean to automatically generate theorems that can be used to prove that two instances of a structure are equal when their components are equal.</span><br></pre></td></tr></table></figure>
+<h3 id="define-particular-instances-of-structure"><a href="#define-particular-instances-of-structure" class="headerlink" title="define particular instances of structure"></a>define particular instances of structure</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">def inst_name : struc_name where</span><br><span class="line">  ...</span><br><span class="line">  -- e.g. x:=1</span><br><span class="line">---------------------------------</span><br><span class="line">def inst_name : struct_name :=</span><br><span class="line">  ...</span><br><span class="line">  --e.g. &lt;value1 , ,...&gt; -- anonymous constructor notation</span><br><span class="line">---------------------------------</span><br><span class="line">def inst_name :=</span><br><span class="line">  struc_name.mk ...valuek valuek+1 ...</span><br><span class="line">  -- struc_name.mk 是constructor，也可以自己命名，需要在define structure 的时候，比where多 了name和::</span><br><span class="line">  -- structure struc_name where constructor_name ::</span><br><span class="line">  --    ...</span><br><span class="line">-- open a namespace</span><br><span class="line">namespace namespace_name</span><br><span class="line">...</span><br><span class="line">end namespace_name</span><br></pre></td></tr></table></figure>
+<h3 id="definations-and-theorems"><a href="#definations-and-theorems" class="headerlink" title="definations and theorems"></a>definations and theorems</h3><p>about namespace: when namespace not open, can use anonymous projection notation,which allows us to write <strong>a.add b</strong> instead of <strong>namespace_name.add a b</strong>.</p>
+<p><strong>protected</strong> keyword</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-- so that the theorem name is Point.add_comm,even when the namespace is open</span><br><span class="line">protected theorem add_comm (a b :Point) :add a b = add b a:=by</span><br><span class="line">  sorry</span><br></pre></td></tr></table></figure>
+<h2 id="6-2-Algebraic-Structures"><a href="#6-2-Algebraic-Structures" class="headerlink" title="6.2 Algebraic Structures"></a>6.2 Algebraic Structures</h2><p><strong>abelian or commutative group</strong> : set A, operation •,假设a b ∈ A,则需要满足Closure （a · b ∈ A），Associativity（结合律），Identity element (必存在e∈A就是元 使得a · e &#x3D; e · a &#x3D; a)，Inverse element(对任意a，都有a · b &#x3D; b · a &#x3D; e)，Commutativity（交换律）<br><strong>lattice</strong> ： 带有join和meet（leat upper bound 和greatest lower bound）偏序集合<br><strong>ring</strong> ： 加法abelian group和an associative multiplication operation *，和identity 1，且multiplication distributes over addition.如果乘法是交换的则环是交换的</p>
+<h1 id="Lean-theorem"><a href="#Lean-theorem" class="headerlink" title="Lean theorem"></a>Lean theorem</h1><p>multiple arrows：隐式右结合（associate to the right）</p>
+<h1 id="Lean使用快捷键"><a href="#Lean使用快捷键" class="headerlink" title="Lean使用快捷键"></a>Lean使用快捷键</h1><p>Ctrl-Shift-P ： get access to the Lean 4:show all abbreviations<br>Ctrl-Space : completion in the editior to guess the theorem name</p>
+<h1 id="写法"><a href="#写法" class="headerlink" title="写法"></a>写法</h1><h2 id="运算的特殊写法"><a href="#运算的特殊写法" class="headerlink" title="运算的特殊写法"></a>运算的特殊写法</h2><ol>
+<li>divisibility relation整除关系 |</li>
+</ol>
+<h2 id="提示写法"><a href="#提示写法" class="headerlink" title="提示写法"></a>提示写法</h2><p>“apply?”可以在右边得到suggestions</p>
+<h2 id="重复证明过程的写法"><a href="#重复证明过程的写法" class="headerlink" title="重复证明过程的写法"></a>重复证明过程的写法</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--1. 使用hypothesis ：任意</span><br><span class="line">--2. 使用repeat</span><br><span class="line">example : min a b = min b a := by</span><br><span class="line">  have h : ∀ x y : ℝ, min x y ≤ min y x := by</span><br><span class="line">    intro x y</span><br><span class="line">    apply le_min</span><br><span class="line">    apply min_le_right</span><br><span class="line">    apply min_le_left</span><br><span class="line">  apply le_antisymm</span><br><span class="line">  apply h</span><br><span class="line">  apply h</span><br><span class="line">-----------------------</span><br><span class="line">example : min a b = min b a := by</span><br><span class="line">  apply le_antisymm</span><br><span class="line">  repeat</span><br><span class="line">    apply le_min</span><br><span class="line">    apply min_le_right</span><br><span class="line">    apply min_le_left</span><br></pre></td></tr></table></figure>
+<h2 id="name-of-theorem"><a href="#name-of-theorem" class="headerlink" title="name_of_theorem"></a>name_of_theorem</h2><p>A_of_B_of_C: established something of the form A from hypothese of the form B and C,where A,B,C approximate the way we might read the goals out loud,e.g. x+y&lt;… probably start with add_lt.</p>
+<h2 id="example-use-by-not-use-by"><a href="#example-use-by-not-use-by" class="headerlink" title="example use by &amp; not use by"></a>example use by &amp; not use by</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">example (a b : R) : a - b = a + -b :=by</span><br><span class="line">  rw[sub_eq_add_neg a b]</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">example (a b : R) : a - b = a + -b :=</span><br><span class="line">  sub_eq_add_neg a b</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<h1 id="语法记录"><a href="#语法记录" class="headerlink" title="语法记录"></a>语法记录</h1><h2 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--</span><br><span class="line">section ... end</span><br><span class="line">-- 变量声明</span><br><span class="line">variable(v1 v2 v3 ... : type) </span><br><span class="line">-- 检查类型，或描述用法</span><br><span class="line">#check ...</span><br><span class="line">#check a -- a:R</span><br><span class="line">#check mul_comm -- mul_comm.&#123;u_1&#125; &#123;G : Type u_1&#125; [CommMagma G] (a b : G) : a * b = b * a</span><br><span class="line"></span><br><span class="line">#check norm_num -- 常量计算与比较，Normalize numerical expressions. Supports the operations + - * / ⁻¹ ^ and % over numerical types such as ℕ, ℤ, ℚ, ℝ, ℂ and some general algebraic types, and can prove goals of the form A = B, A ≠ B, A &lt; B and A ≤ B, where A and B are numerical expressions. It also has a relatively simple primality prover.</span><br><span class="line"></span><br><span class="line">-- Nat.gcd m n :最大公约数,在显示的时候会显示出来m.gcd.n</span><br></pre></td></tr></table></figure>
+
+<h3 id="rfl-is-short-for-“reflexivity”"><a href="#rfl-is-short-for-“reflexivity”" class="headerlink" title="rfl is short for “reflexivity”."></a>rfl is short for “reflexivity”.</h3><h3 id="calc先定义阶段目标再填写过程"><a href="#calc先定义阶段目标再填写过程" class="headerlink" title="calc先定义阶段目标再填写过程"></a>calc先定义阶段目标再填写过程</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">example:(a+b)*(a+b) = a*a+2*a*b +b*b:</span><br><span class="line">    calc</span><br><span class="line">        xx :by</span><br><span class="line">            xx</span><br><span class="line">        _=xxx:=by</span><br><span class="line">            xx</span><br><span class="line">        _=xxxx:=by</span><br><span class="line">            xxxx</span><br></pre></td></tr></table></figure>
+<h3 id="have-先提出假设h进行证明，之后可以使用h推断goal"><a href="#have-先提出假设h进行证明，之后可以使用h推断goal" class="headerlink" title="have 先提出假设h进行证明，之后可以使用h推断goal"></a>have 先提出假设h进行证明，之后可以使用h推断goal</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">theorem zero_mul(a: R):0*a  =0 := by</span><br><span class="line">    have h: 0*a+0*a = 0*a+0 :=by</span><br><span class="line">        rw[←add_mul,add_zero,add_zero]</span><br><span class="line">    rw[add_left_cancel h]</span><br></pre></td></tr></table></figure>
+<h3 id="rw-…-…-…-替换"><a href="#rw-…-…-…-替换" class="headerlink" title="rw[…,…,…]替换"></a>rw[…,…,…]替换</h3><ol>
+<li>变量</li>
+</ol>
+<h4 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h4><p>左箭头表示a&#x3D;b:用a替换b</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nth_rw &lt;第几个&gt;[]替换</span><br><span class="line">rw[mul_assoc]--a*b*c = a*(b*c)</span><br><span class="line">rw[mul_assoc]--a*(b*c)=a*b*c</span><br><span class="line">sub_self -- a-a=0</span><br></pre></td></tr></table></figure>
+<p>&lt;⬅&gt;mul_assoc <v><br>mul_comm &lt;v1,v2&gt;</p>
+<h3 id="tactic：ring"><a href="#tactic：ring" class="headerlink" title="tactic：ring"></a>tactic：ring</h3><p>automation for that follow purely from the ring axioms</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">example: c*b*a = b*(a*c):= by</span><br><span class="line">    ring</span><br></pre></td></tr></table></figure>
+<p>a ring consists of a collection of<br>objects,<br>R,(R with + is an <strong>abelian group</strong>,with 0 as the additive identity , with negation as inverse)<br>operations + *,and (multiplication is associative with identity 1,and multiplication distributes over addition)<br>constants 0 and 1,and<br>an operation x-&gt;-x </p>
+<p>Lean is good not only for proving things about concrete mathematical structures like the natural numbers and the integers, but also for proving things about abstract structures, characterized axiomatically, like rings. Moreover, Lean supports generic reasoning about both abstract and concrete structures, and can be trained to recognize appropriate instances.</p>
+]]></content>
+      <categories>
+        <category>Lean</category>
+      </categories>
+      <tags>
+        <tag>Lean</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>diary</title>
+    <url>/2026/01/13/diary/</url>
+    <content><![CDATA[<p>Today is not a big day, but an interview day.</p>
+<p>Today, I had my first shortest interview, maybe my second, if you exclude the time spent on handwriting.</p>
+<p>Last Friday, I got an interview for thirty minutes, what I performed looks like an idiot, like that I never got into university, now with my bachelor’s degree, not a bad school background. I can get some interview chances. Which makes me suck, but fortunate. I don’t want to be judged, but if I am good, the judge is not so unbearable. Rediculous!</p>
+<p>Each time the same question comes to me, I think a lot or a little,then give a suck anwser. I do not like that question, like we are not so familiar that we can joke with each other.</p>
+<p>I am boring, but not bored. I need to take actions that are noticeable and do not require verbal explanation.</p>
+<p>20260613</p>
+]]></content>
+      <tags>
+        <tag>diary</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>UniqueIds</title>
+    <url>/2025/12/22/UniqueIds/</url>
+    <content><![CDATA[<h1 id="What-is-SnowflkeId"><a href="#What-is-SnowflkeId" class="headerlink" title="What is SnowflkeId"></a>What is SnowflkeId</h1>]]></content>
+      <tags>
+        <tag>snowflakeId segmentId</tag>
       </tags>
   </entry>
   <entry>
@@ -172,58 +246,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Mathematics_in_Lean</title>
-    <url>/2025/01/02/Mathematics-in-Lean/</url>
-    <content><![CDATA[<p>Mathematics in lean ：基于mathlib库，建造复杂表达式的方式：1.自己写，2.提供instruction 指导如何构建<br>Theorem Proving in Lean: 侧重底层逻辑框架和Lean的核心语法</p>
-<h1 id="Log"><a href="#Log" class="headerlink" title="Log"></a>Log</h1><h1 id="Linear-algebra写法"><a href="#Linear-algebra写法" class="headerlink" title="Linear algebra写法"></a>Linear algebra写法</h1><h2 id="2-basic"><a href="#2-basic" class="headerlink" title="2 basic"></a>2 basic</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-- le_div_iff₀这个theorem，以及rm[]</span><br><span class="line">-- 使用方面linarith(线性计算)，和ring(交换)</span><br><span class="line">-- 以及证明时可以把用的定理直接提出来，theorem</span><br><span class="line">-- have h:引入假设，calc 分步计算，让过程更加清晰，因为写出了要证明的每一步的结果</span><br><span class="line">-- tatics： apply , repeat</span><br></pre></td></tr></table></figure>
-<h2 id="3-1-Impication-and-the-Universal-Quantifier"><a href="#3-1-Impication-and-the-Universal-Quantifier" class="headerlink" title="3.1 Impication and the Universal Quantifier"></a>3.1 Impication and the Universal Quantifier</h2><p>In lean,in a sequence of implications there are implicit parentheses grouped to the right. </p>
-<p>it is common in Lean to use curly brackets to make quantified variables implicit when they can be inferred from subsequent hypotheses.So we can just do lemma to the hypothese without mentioning the objects.即用{}括起来的在调用时不需要显示指出。</p>
-<h2 id="5-2-Induction-and-Recursion"><a href="#5-2-Induction-and-Recursion" class="headerlink" title="5.2 Induction and Recursion"></a>5.2 Induction and Recursion</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-- 归纳</span><br><span class="line">-- inductive types (which are types generated infuctively by a given list of constructors)</span><br><span class="line">-- e.g. the natual numbers are declared as follows( in Prelude.lean)</span><br><span class="line">inductive Nat where</span><br><span class="line">  | zero : Nat -- constructor</span><br><span class="line">  | succ (n : Nat): Nat -- constructor</span><br><span class="line">---------------------------------------------------------</span><br><span class="line"></span><br><span class="line">@[simp] -- specifys that the defining equation should be added to the database of identities that the simplifier uses by default</span><br></pre></td></tr></table></figure>
-
-<h2 id="6-1-Defining-Structures"><a href="#6-1-Defining-Structures" class="headerlink" title="6.1 Defining Structures"></a>6.1 Defining Structures</h2><p><code>structure</code> can specify not only <strong>data types</strong> but also <strong>constraints  that the data must satisfy(In lean,these are represented as fields of type <code>Prop</code>)</strong>.<br><code>def</code> 可以用来定义structure实例<br><code>subtype</code>类型({x: alpha &#x2F;&#x2F; p x}表示for all a in alpha，p x is true) construction combines a piece of data with a property.</p>
-<blockquote>
-<p>structure的好处：But even though we can use products, subtypes, and Sigma types instead of structures, using structures has a number of advantages. Defining a structure abstracts away the underlying representation and provides custom names for the functions that access the components. This makes proofs more robust: proofs that rely only on the interface to a structure will generally continue to work when we change the definition, as long as we redefine the old accessors in terms of the new definition. Moreover, as we are about to see, Lean provides support for weaving structures together into a rich, interconnected hierarchy, and for managing the interactions between them.</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">structure structure_name where</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
-<h3 id="annotation-when-define-a-structure："><a href="#annotation-when-define-a-structure：" class="headerlink" title="annotation when define a structure："></a>annotation when define a structure：</h3><p><code>structure</code> can bundle together data,so as the <code>and符号</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-- 此注解表示自动生成定理: 当结构体的两个实例组成部分对应相同时，这两个实例相等</span><br><span class="line">@[ext] -- extensionality,tells Lean to automatically generate theorems that can be used to prove that two instances of a structure are equal when their components are equal.</span><br></pre></td></tr></table></figure>
-<h3 id="define-particular-instances-of-structure"><a href="#define-particular-instances-of-structure" class="headerlink" title="define particular instances of structure"></a>define particular instances of structure</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">def inst_name : struc_name where</span><br><span class="line">  ...</span><br><span class="line">  -- e.g. x:=1</span><br><span class="line">---------------------------------</span><br><span class="line">def inst_name : struct_name :=</span><br><span class="line">  ...</span><br><span class="line">  --e.g. &lt;value1 , ,...&gt; -- anonymous constructor notation</span><br><span class="line">---------------------------------</span><br><span class="line">def inst_name :=</span><br><span class="line">  struc_name.mk ...valuek valuek+1 ...</span><br><span class="line">  -- struc_name.mk 是constructor，也可以自己命名，需要在define structure 的时候，比where多 了name和::</span><br><span class="line">  -- structure struc_name where constructor_name ::</span><br><span class="line">  --    ...</span><br><span class="line">-- open a namespace</span><br><span class="line">namespace namespace_name</span><br><span class="line">...</span><br><span class="line">end namespace_name</span><br></pre></td></tr></table></figure>
-<h3 id="definations-and-theorems"><a href="#definations-and-theorems" class="headerlink" title="definations and theorems"></a>definations and theorems</h3><p>about namespace: when namespace not open, can use anonymous projection notation,which allows us to write <strong>a.add b</strong> instead of <strong>namespace_name.add a b</strong>.</p>
-<p><strong>protected</strong> keyword</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-- so that the theorem name is Point.add_comm,even when the namespace is open</span><br><span class="line">protected theorem add_comm (a b :Point) :add a b = add b a:=by</span><br><span class="line">  sorry</span><br></pre></td></tr></table></figure>
-<h2 id="6-2-Algebraic-Structures"><a href="#6-2-Algebraic-Structures" class="headerlink" title="6.2 Algebraic Structures"></a>6.2 Algebraic Structures</h2><p><strong>abelian or commutative group</strong> : set A, operation •,假设a b ∈ A,则需要满足Closure （a · b ∈ A），Associativity（结合律），Identity element (必存在e∈A就是元 使得a · e &#x3D; e · a &#x3D; a)，Inverse element(对任意a，都有a · b &#x3D; b · a &#x3D; e)，Commutativity（交换律）<br><strong>lattice</strong> ： 带有join和meet（leat upper bound 和greatest lower bound）偏序集合<br><strong>ring</strong> ： 加法abelian group和an associative multiplication operation *，和identity 1，且multiplication distributes over addition.如果乘法是交换的则环是交换的</p>
-<h1 id="Lean-theorem"><a href="#Lean-theorem" class="headerlink" title="Lean theorem"></a>Lean theorem</h1><p>multiple arrows：隐式右结合（associate to the right）</p>
-<h1 id="Lean使用快捷键"><a href="#Lean使用快捷键" class="headerlink" title="Lean使用快捷键"></a>Lean使用快捷键</h1><p>Ctrl-Shift-P ： get access to the Lean 4:show all abbreviations<br>Ctrl-Space : completion in the editior to guess the theorem name</p>
-<h1 id="写法"><a href="#写法" class="headerlink" title="写法"></a>写法</h1><h2 id="运算的特殊写法"><a href="#运算的特殊写法" class="headerlink" title="运算的特殊写法"></a>运算的特殊写法</h2><ol>
-<li>divisibility relation整除关系 |</li>
-</ol>
-<h2 id="提示写法"><a href="#提示写法" class="headerlink" title="提示写法"></a>提示写法</h2><p>“apply?”可以在右边得到suggestions</p>
-<h2 id="重复证明过程的写法"><a href="#重复证明过程的写法" class="headerlink" title="重复证明过程的写法"></a>重复证明过程的写法</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--1. 使用hypothesis ：任意</span><br><span class="line">--2. 使用repeat</span><br><span class="line">example : min a b = min b a := by</span><br><span class="line">  have h : ∀ x y : ℝ, min x y ≤ min y x := by</span><br><span class="line">    intro x y</span><br><span class="line">    apply le_min</span><br><span class="line">    apply min_le_right</span><br><span class="line">    apply min_le_left</span><br><span class="line">  apply le_antisymm</span><br><span class="line">  apply h</span><br><span class="line">  apply h</span><br><span class="line">-----------------------</span><br><span class="line">example : min a b = min b a := by</span><br><span class="line">  apply le_antisymm</span><br><span class="line">  repeat</span><br><span class="line">    apply le_min</span><br><span class="line">    apply min_le_right</span><br><span class="line">    apply min_le_left</span><br></pre></td></tr></table></figure>
-<h2 id="name-of-theorem"><a href="#name-of-theorem" class="headerlink" title="name_of_theorem"></a>name_of_theorem</h2><p>A_of_B_of_C: established something of the form A from hypothese of the form B and C,where A,B,C approximate the way we might read the goals out loud,e.g. x+y&lt;… probably start with add_lt.</p>
-<h2 id="example-use-by-not-use-by"><a href="#example-use-by-not-use-by" class="headerlink" title="example use by &amp; not use by"></a>example use by &amp; not use by</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">example (a b : R) : a - b = a + -b :=by</span><br><span class="line">  rw[sub_eq_add_neg a b]</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">example (a b : R) : a - b = a + -b :=</span><br><span class="line">  sub_eq_add_neg a b</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-<h1 id="语法记录"><a href="#语法记录" class="headerlink" title="语法记录"></a>语法记录</h1><h2 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--</span><br><span class="line">section ... end</span><br><span class="line">-- 变量声明</span><br><span class="line">variable(v1 v2 v3 ... : type) </span><br><span class="line">-- 检查类型，或描述用法</span><br><span class="line">#check ...</span><br><span class="line">#check a -- a:R</span><br><span class="line">#check mul_comm -- mul_comm.&#123;u_1&#125; &#123;G : Type u_1&#125; [CommMagma G] (a b : G) : a * b = b * a</span><br><span class="line"></span><br><span class="line">#check norm_num -- 常量计算与比较，Normalize numerical expressions. Supports the operations + - * / ⁻¹ ^ and % over numerical types such as ℕ, ℤ, ℚ, ℝ, ℂ and some general algebraic types, and can prove goals of the form A = B, A ≠ B, A &lt; B and A ≤ B, where A and B are numerical expressions. It also has a relatively simple primality prover.</span><br><span class="line"></span><br><span class="line">-- Nat.gcd m n :最大公约数,在显示的时候会显示出来m.gcd.n</span><br></pre></td></tr></table></figure>
-
-<h3 id="rfl-is-short-for-“reflexivity”"><a href="#rfl-is-short-for-“reflexivity”" class="headerlink" title="rfl is short for “reflexivity”."></a>rfl is short for “reflexivity”.</h3><h3 id="calc先定义阶段目标再填写过程"><a href="#calc先定义阶段目标再填写过程" class="headerlink" title="calc先定义阶段目标再填写过程"></a>calc先定义阶段目标再填写过程</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">example:(a+b)*(a+b) = a*a+2*a*b +b*b:</span><br><span class="line">    calc</span><br><span class="line">        xx :by</span><br><span class="line">            xx</span><br><span class="line">        _=xxx:=by</span><br><span class="line">            xx</span><br><span class="line">        _=xxxx:=by</span><br><span class="line">            xxxx</span><br></pre></td></tr></table></figure>
-<h3 id="have-先提出假设h进行证明，之后可以使用h推断goal"><a href="#have-先提出假设h进行证明，之后可以使用h推断goal" class="headerlink" title="have 先提出假设h进行证明，之后可以使用h推断goal"></a>have 先提出假设h进行证明，之后可以使用h推断goal</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">theorem zero_mul(a: R):0*a  =0 := by</span><br><span class="line">    have h: 0*a+0*a = 0*a+0 :=by</span><br><span class="line">        rw[←add_mul,add_zero,add_zero]</span><br><span class="line">    rw[add_left_cancel h]</span><br></pre></td></tr></table></figure>
-<h3 id="rw-…-…-…-替换"><a href="#rw-…-…-…-替换" class="headerlink" title="rw[…,…,…]替换"></a>rw[…,…,…]替换</h3><ol>
-<li>变量</li>
-</ol>
-<h4 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h4><p>左箭头表示a&#x3D;b:用a替换b</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nth_rw &lt;第几个&gt;[]替换</span><br><span class="line">rw[mul_assoc]--a*b*c = a*(b*c)</span><br><span class="line">rw[mul_assoc]--a*(b*c)=a*b*c</span><br><span class="line">sub_self -- a-a=0</span><br></pre></td></tr></table></figure>
-<p>&lt;⬅&gt;mul_assoc <v><br>mul_comm &lt;v1,v2&gt;</p>
-<h3 id="tactic：ring"><a href="#tactic：ring" class="headerlink" title="tactic：ring"></a>tactic：ring</h3><p>automation for that follow purely from the ring axioms</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">example: c*b*a = b*(a*c):= by</span><br><span class="line">    ring</span><br></pre></td></tr></table></figure>
-<p>a ring consists of a collection of<br>objects,<br>R,(R with + is an <strong>abelian group</strong>,with 0 as the additive identity , with negation as inverse)<br>operations + *,and (multiplication is associative with identity 1,and multiplication distributes over addition)<br>constants 0 and 1,and<br>an operation x-&gt;-x </p>
-<p>Lean is good not only for proving things about concrete mathematical structures like the natural numbers and the integers, but also for proving things about abstract structures, characterized axiomatically, like rings. Moreover, Lean supports generic reasoning about both abstract and concrete structures, and can be trained to recognize appropriate instances.</p>
-]]></content>
-      <categories>
-        <category>Lean</category>
-      </categories>
-      <tags>
-        <tag>Lean</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>compiler impletment learn from Jack W. Crenshaw</title>
     <url>/2024/10/26/compiler-impletment-learn-from-Jack-W-Crenshaw/</url>
     <content><![CDATA[<p><a href="https://compilers.iecc.com/crenshaw">学习网站</a></p>
@@ -260,31 +282,11 @@
       </tags>
   </entry>
   <entry>
-    <title>UniqueIds</title>
-    <url>/2025/12/22/UniqueIds/</url>
-    <content><![CDATA[<h1 id="What-is-SnowflkeId"><a href="#What-is-SnowflkeId" class="headerlink" title="What is SnowflkeId"></a>What is SnowflkeId</h1>]]></content>
-      <tags>
-        <tag>snowflakeId segmentId</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>diary</title>
-    <url>/2026/01/13/diary/</url>
-    <content><![CDATA[<p>Today is not a big day, but an interview day.</p>
-<p>Today, I had my first shortest interview, maybe my second, if you exclude the time spent on handwriting.</p>
-<p>Last Friday, I got an interview for thirty minutes, what I performed looks like an idiot, like that I never got into university, now with my bachelor’s degree, not a bad school background. I can get some interview chances. Which makes me suck, but fortunate. I don’t want to be judged, but if I am good, the judge is not so unbearable. Rediculous!</p>
-<p>Each time the same question comes to me, I think a lot or a little,then give a suck anwser. I do not like that question, like we are not so familiar that we can joke with each other.</p>
-<p>I am boring, but not bored. I need to take actions that are noticeable and do not require verbal explanation.</p>
-<p>20260613</p>
-]]></content>
-      <tags>
-        <tag>diary</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Next主题</title>
     <url>/2024/10/05/hello-world/</url>
-    <content><![CDATA[<h2 id="指路Next入门教程"><a href="#指路Next入门教程" class="headerlink" title="指路Next入门教程"></a><a href="https://hexo-next.readthedocs.io/zh-cn/latest/next/">指路Next入门教程</a></h2>]]></content>
+    <content><![CDATA[<h2 id="指路Next入门教程"><a href="#指路Next入门教程" class="headerlink" title="指路Next入门教程"></a><a href="https://hexo-next.readthedocs.io/zh-cn/latest/next/">指路Next入门教程</a></h2><p>waline评论 + vercel部署 + leanCloud 数据存储</p>
+<p>leanCloud 关服，使用supabase数据存储</p>
+]]></content>
       <categories>
         <category>Hexo-Next</category>
       </categories>
