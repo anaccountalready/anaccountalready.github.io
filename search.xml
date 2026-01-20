@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>BugBlog</title>
+    <url>/2024/12/11/BugBlog/</url>
+    <content><![CDATA[<h1 id="problem"><a href="#problem" class="headerlink" title="problem"></a>problem</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//JAVA</span></span><br><span class="line"><span class="comment">// Wrong!!!,这样写改不了树，put不进去</span></span><br><span class="line"><span class="comment">//	public void NonrecursivePut(Key key,Value val)&#123;</span></span><br><span class="line"><span class="comment">//		if(key==null)throw new IllegalArgumentException(&quot;the 1st of Put() is null&quot;);</span></span><br><span class="line"><span class="comment">//		Node x = root;</span></span><br><span class="line"><span class="comment">//		while(x!=null)&#123;</span></span><br><span class="line"><span class="comment">//			int cmp = key.compareTo(x.key);</span></span><br><span class="line"><span class="comment">//			if(cmp&gt;0) x=x.right;</span></span><br><span class="line"><span class="comment">//			else if(cmp&lt;0) x= x.left;</span></span><br><span class="line"><span class="comment">//			else x.val=val;</span></span><br><span class="line"><span class="comment">//		&#125;</span></span><br><span class="line"><span class="comment">//		x=new Node(key,val);Wrong!!因为只是将临时引用指向了新创建的对象，而实际的x.left或x.right引用依然为null</span></span><br><span class="line"><span class="comment">//	&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Solution: 记录父节点，通过修改父节点.left和right进行</span></span><br></pre></td></tr></table></figure>
+<p><img src="/hexoLeancloudCounterSecurity.png" alt="hexo-leancloud-counter-security报错"></p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+      <tags>
+        <tag>Bug</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>How_To_ASK_QUESITION_SMART_WAY</title>
     <url>/2026/01/10/How-To-ASK-QUESITION-SMART-WAY/</url>
     <content><![CDATA[<h1 id="资源链"><a href="#资源链" class="headerlink" title="资源链"></a>资源链</h1><p><a href="http://stackexchange.com/sites">Q&amp;A siteS: stack exchange</a></p>
@@ -24,6 +37,15 @@
       </tags>
   </entry>
   <entry>
+    <title>JAVA_Knowledge</title>
+    <url>/2025/11/01/JAVA-Knowledge/</url>
+    <content><![CDATA[<h1 id="Introdutino-to-Garbage-Collection-Tuning"><a href="#Introdutino-to-Garbage-Collection-Tuning" class="headerlink" title="Introdutino to Garbage Collection Tuning"></a>Introdutino to Garbage Collection Tuning</h1><p>JAVA SE </p>
+]]></content>
+      <tags>
+        <tag>JAVA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Lean4</title>
     <url>/2024/12/31/Lean4/</url>
     <content><![CDATA[<p>Lean4：被称为交互式定理证明器（interactive theorem-proving system）的计算机系统（也称为证明助手或形式化系统）提供了另一种表达数学论证的方法。<br>mathlib(Lean mathematical library)是一项由社区推动的工作，旨在建立一个以lean proof assistant形式化的统一数学库。<br>a proof assistant：(一个软件，提供规范语言，依照规范语言定义对象和性质，证明定理，系统检查定理的正确性，直至逻辑基础)<br>Formalization:  我们将用一种规范的语言（如编程语言）来书写数学定义、定理和证明，让 Lean 能够理解。 作为回报，Lean 会提供反馈和信息，解释表达式并保证其格式正确，并最终认证我们证明的正确性。</p>
@@ -37,19 +59,6 @@
       </categories>
       <tags>
         <tag>Lean</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>BugBlog</title>
-    <url>/2024/12/11/BugBlog/</url>
-    <content><![CDATA[<h1 id="problem"><a href="#problem" class="headerlink" title="problem"></a>problem</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//JAVA</span></span><br><span class="line"><span class="comment">// Wrong!!!,这样写改不了树，put不进去</span></span><br><span class="line"><span class="comment">//	public void NonrecursivePut(Key key,Value val)&#123;</span></span><br><span class="line"><span class="comment">//		if(key==null)throw new IllegalArgumentException(&quot;the 1st of Put() is null&quot;);</span></span><br><span class="line"><span class="comment">//		Node x = root;</span></span><br><span class="line"><span class="comment">//		while(x!=null)&#123;</span></span><br><span class="line"><span class="comment">//			int cmp = key.compareTo(x.key);</span></span><br><span class="line"><span class="comment">//			if(cmp&gt;0) x=x.right;</span></span><br><span class="line"><span class="comment">//			else if(cmp&lt;0) x= x.left;</span></span><br><span class="line"><span class="comment">//			else x.val=val;</span></span><br><span class="line"><span class="comment">//		&#125;</span></span><br><span class="line"><span class="comment">//		x=new Node(key,val);Wrong!!因为只是将临时引用指向了新创建的对象，而实际的x.left或x.right引用依然为null</span></span><br><span class="line"><span class="comment">//	&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Solution: 记录父节点，通过修改父节点.left和right进行</span></span><br></pre></td></tr></table></figure>
-<p><img src="/hexoLeancloudCounterSecurity.png" alt="hexo-leancloud-counter-security报错"></p>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>Bug</tag>
       </tags>
   </entry>
   <entry>
@@ -73,15 +82,6 @@
       </categories>
       <tags>
         <tag>Linear Algebra</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JAVA_Knowledge</title>
-    <url>/2025/11/01/JAVA-Knowledge/</url>
-    <content><![CDATA[<h1 id="Introdutino-to-Garbage-Collection-Tuning"><a href="#Introdutino-to-Garbage-Collection-Tuning" class="headerlink" title="Introdutino to Garbage Collection Tuning"></a>Introdutino to Garbage Collection Tuning</h1><p>JAVA SE </p>
-]]></content>
-      <tags>
-        <tag>JAVA</tag>
       </tags>
   </entry>
   <entry>
@@ -134,28 +134,6 @@
       </categories>
       <tags>
         <tag>Lean</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>diary</title>
-    <url>/2026/01/13/diary/</url>
-    <content><![CDATA[<p>Today is not a big day, but an interview day.</p>
-<p>Today, I had my first shortest interview, maybe my second, if you exclude the time spent on handwriting.</p>
-<p>Last Friday, I got an interview for thirty minutes, what I performed looks like an idiot, like that I never got into university, now with my bachelor’s degree, not a bad school background. I can get some interview chances. Which makes me suck, but fortunate. I don’t want to be judged, but if I am good, the judge is not so unbearable. Rediculous!</p>
-<p>Each time the same question comes to me, I think a lot or a little,then give a suck anwser. I do not like that question, like we are not so familiar that we can joke with each other.</p>
-<p>I am boring, but not bored. I need to take actions that are noticeable and do not require verbal explanation.</p>
-<p>20260613</p>
-]]></content>
-      <tags>
-        <tag>diary</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>UniqueIds</title>
-    <url>/2025/12/22/UniqueIds/</url>
-    <content><![CDATA[<h1 id="What-is-SnowflkeId"><a href="#What-is-SnowflkeId" class="headerlink" title="What is SnowflkeId"></a>What is SnowflkeId</h1>]]></content>
-      <tags>
-        <tag>snowflakeId segmentId</tag>
       </tags>
   </entry>
   <entry>
@@ -246,6 +224,20 @@
       </tags>
   </entry>
   <entry>
+    <title>diary</title>
+    <url>/2026/01/13/diary/</url>
+    <content><![CDATA[<p>Today is not a big day, but an interview day.</p>
+<p>Today, I had my first shortest interview, maybe my second, if you exclude the time spent on handwriting.</p>
+<p>Last Friday, I got an interview for thirty minutes, what I performed looks like an idiot, like that I never got into university, now with my bachelor’s degree, not a bad school background. I can get some interview chances. Which makes me suck, but fortunate. I don’t want to be judged, but if I am good, the judge is not so unbearable. Rediculous!</p>
+<p>Each time the same question comes to me, I think a lot or a little,then give a suck anwser. I do not like that question, like we are not so familiar that we can joke with each other.</p>
+<p>I am boring, but not bored. I need to take actions that are noticeable and do not require verbal explanation.</p>
+<p>20260613</p>
+]]></content>
+      <tags>
+        <tag>diary</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>compiler impletment learn from Jack W. Crenshaw</title>
     <url>/2024/10/26/compiler-impletment-learn-from-Jack-W-Crenshaw/</url>
     <content><![CDATA[<p><a href="https://compilers.iecc.com/crenshaw">学习网站</a></p>
@@ -279,6 +271,14 @@
         <tag>68000 Assembly</tag>
         <tag>Jack W. Crenshaw</tag>
         <tag>compiler</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>UniqueIds</title>
+    <url>/2025/12/22/UniqueIds/</url>
+    <content><![CDATA[<h1 id="What-is-SnowflkeId"><a href="#What-is-SnowflkeId" class="headerlink" title="What is SnowflkeId"></a>What is SnowflkeId</h1>]]></content>
+      <tags>
+        <tag>snowflakeId segmentId</tag>
       </tags>
   </entry>
   <entry>
