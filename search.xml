@@ -14,6 +14,29 @@
       </tags>
   </entry>
   <entry>
+    <title>How_To_ASK_QUESITION_SMART_WAY</title>
+    <url>/2026/01/10/How-To-ASK-QUESITION-SMART-WAY/</url>
+    <content><![CDATA[<h1 id="资源链"><a href="#资源链" class="headerlink" title="资源链"></a>资源链</h1><p><a href="http://stackexchange.com/sites">Q&amp;A siteS: stack exchange</a></p>
+<p><a href="http://www.catb.org/~esr/faqs/hacker-howto.html#what_is">HOW to be a hacker</a></p>
+<blockquote>
+<p>web site candidates:</p>
+</blockquote>
+<ol>
+<li><a href="https://superuser.com/">Super User</a>: general-purpose computing(isn’t about programming)</li>
+<li><a href="https://stackoverflow.blog/releases/stack-overflow">stack overflow</a>: programming questions</li>
+<li><a href="https://serverfault.com/tour">Server Fault</a>: server and network administration questions</li>
+</ol>
+<p><a href="https://www.w3.org/guide/meetings/irc.html#w3c-irc-web-client">what is web and IRC</a></p>
+]]></content>
+      <categories>
+        <category>reading</category>
+        <category>should know</category>
+      </categories>
+      <tags>
+        <tag>READING ARTICAL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JAVA_Knowledge</title>
     <url>/2025/11/01/JAVA-Knowledge/</url>
     <content><![CDATA[<h1 id="Introdutino-to-Garbage-Collection-Tuning"><a href="#Introdutino-to-Garbage-Collection-Tuning" class="headerlink" title="Introdutino to Garbage Collection Tuning"></a>Introdutino to Garbage Collection Tuning</h1><p>JAVA SE </p>
@@ -59,29 +82,6 @@
       </categories>
       <tags>
         <tag>Linear Algebra</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>How_To_ASK_QUESITION_SMART_WAY</title>
-    <url>/2026/01/10/How-To-ASK-QUESITION-SMART-WAY/</url>
-    <content><![CDATA[<h1 id="资源链"><a href="#资源链" class="headerlink" title="资源链"></a>资源链</h1><p><a href="http://stackexchange.com/sites">Q&amp;A siteS: stack exchange</a></p>
-<p><a href="http://www.catb.org/~esr/faqs/hacker-howto.html#what_is">HOW to be a hacker</a></p>
-<blockquote>
-<p>web site candidates:</p>
-</blockquote>
-<ol>
-<li><a href="https://superuser.com/">Super User</a>: general-purpose computing(isn’t about programming)</li>
-<li><a href="https://stackoverflow.blog/releases/stack-overflow">stack overflow</a>: programming questions</li>
-<li><a href="https://serverfault.com/tour">Server Fault</a>: server and network administration questions</li>
-</ol>
-<p><a href="https://www.w3.org/guide/meetings/irc.html#w3c-irc-web-client">what is web and IRC</a></p>
-]]></content>
-      <categories>
-        <category>reading</category>
-        <category>should know</category>
-      </categories>
-      <tags>
-        <tag>READING ARTICAL</tag>
       </tags>
   </entry>
   <entry>
@@ -224,25 +224,6 @@
       </tags>
   </entry>
   <entry>
-    <title>UniqueIds</title>
-    <url>/2025/12/22/UniqueIds/</url>
-    <content><![CDATA[<h1 id="What-is-SnowflkeId"><a href="#What-is-SnowflkeId" class="headerlink" title="What is SnowflkeId"></a>What is SnowflkeId</h1>]]></content>
-      <tags>
-        <tag>snowflakeId segmentId</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Next主题</title>
-    <url>/2024/10/05/hello-world/</url>
-    <content><![CDATA[<h2 id="指路Next入门教程"><a href="#指路Next入门教程" class="headerlink" title="指路Next入门教程"></a><a href="https://hexo-next.readthedocs.io/zh-cn/latest/next/">指路Next入门教程</a></h2>]]></content>
-      <categories>
-        <category>Hexo-Next</category>
-      </categories>
-      <tags>
-        <tag>Beautify</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>compiler impletment learn from Jack W. Crenshaw</title>
     <url>/2024/10/26/compiler-impletment-learn-from-Jack-W-Crenshaw/</url>
     <content><![CDATA[<p><a href="https://compilers.iecc.com/crenshaw">学习网站</a></p>
@@ -279,6 +260,14 @@
       </tags>
   </entry>
   <entry>
+    <title>UniqueIds</title>
+    <url>/2025/12/22/UniqueIds/</url>
+    <content><![CDATA[<h1 id="What-is-SnowflkeId"><a href="#What-is-SnowflkeId" class="headerlink" title="What is SnowflkeId"></a>What is SnowflkeId</h1>]]></content>
+      <tags>
+        <tag>snowflakeId segmentId</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>diary</title>
     <url>/2026/01/13/diary/</url>
     <content><![CDATA[<p>Today is not a big day, but an interview day.</p>
@@ -290,6 +279,17 @@
 ]]></content>
       <tags>
         <tag>diary</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Next主题</title>
+    <url>/2024/10/05/hello-world/</url>
+    <content><![CDATA[<h2 id="指路Next入门教程"><a href="#指路Next入门教程" class="headerlink" title="指路Next入门教程"></a><a href="https://hexo-next.readthedocs.io/zh-cn/latest/next/">指路Next入门教程</a></h2>]]></content>
+      <categories>
+        <category>Hexo-Next</category>
+      </categories>
+      <tags>
+        <tag>Beautify</tag>
       </tags>
   </entry>
   <entry>
