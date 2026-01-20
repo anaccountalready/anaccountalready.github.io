@@ -23,6 +23,45 @@
       </tags>
   </entry>
   <entry>
+    <title>Lean4</title>
+    <url>/2024/12/31/Lean4/</url>
+    <content><![CDATA[<p>Lean4：被称为交互式定理证明器（interactive theorem-proving system）的计算机系统（也称为证明助手或形式化系统）提供了另一种表达数学论证的方法。<br>mathlib(Lean mathematical library)是一项由社区推动的工作，旨在建立一个以lean proof assistant形式化的统一数学库。<br>a proof assistant：(一个软件，提供规范语言，依照规范语言定义对象和性质，证明定理，系统检查定理的正确性，直至逻辑基础)<br>Formalization:  我们将用一种规范的语言（如编程语言）来书写数学定义、定理和证明，让 Lean 能够理解。 作为回报，Lean 会提供反馈和信息，解释表达式并保证其格式正确，并最终认证我们证明的正确性。</p>
+<p>Lean 是一个工具将复杂表达式转换成形式化语言(dependent type theory)</p>
+<h1 id="Syntax-Model"><a href="#Syntax-Model" class="headerlink" title="Syntax Model"></a>Syntax Model</h1><p><a href="https://lean-lang.org/doc/reference/latest/Notations-and-Macros/Defining-New-Syntax/#The-Lean-Language-Reference--Notations-and-Macros--Defining-New-Syntax--Syntax-Model">sytax model</a><br>Lean’s parser produces a concrete syntax tree,of type <code>Lean.Syntax</code>(is an inductive type that represents all of Lean’s syntax,including commands,terms,tactics , and any custom extensions)all of those are basic building blocks: Atoms(fundamental terminals),Identifiers,Nodes(the parsing of nonterminals,contain a syntax kind), Missing Syntax(error mess)<br>Constructors of <code>Lean.Syntax</code>:missing,node,atom,ident</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/-</span><br><span class="line">Copyright (c) 2023 Eric Wieser. All rights reserved.</span><br><span class="line">Released under Apache 2.0 license as described in the file LICENSE.</span><br><span class="line">Authors: Eric Wieser</span><br><span class="line">-/</span><br><span class="line">syntax (name := eqns) &quot;eqns&quot; ident* : attr</span><br><span class="line"></span><br><span class="line">initialize eqnsAttribute : NameMapExtension (Array Name) ←</span><br><span class="line">  registerNameMapAttribute &#123;</span><br><span class="line">    name  := `eqns</span><br><span class="line">    descr := &quot;Overrides the equation lemmas for a declation to the provided list&quot;</span><br><span class="line">    add   :=  fun</span><br><span class="line">    | _, `(attr| eqns $[$names]*) =&gt; -- 这里面的第二个参数是模式匹配，捕获了eqns关键字后面的所有标识符</span><br><span class="line">      pure &lt;| names.map (fun n =&gt; n.getId)</span><br><span class="line">    | _, _ =&gt; Lean.Elab.throwUnsupportedSyntax &#125;</span><br><span class="line"></span><br><span class="line">initialize Lean.Meta.registerGetEqnsFn (fun name =&gt; do</span><br><span class="line">  pure (eqnsAttribute.find? (← getEnv) name))</span><br></pre></td></tr></table></figure>
+<p>本来是def M : ℕ → Matrix m n ℕ<br>def M : ℕ → Matrix (Fin 3) (Fin 3) ℕ – 类型不匹配的原因之一：没有指定矩阵的具体维数<br>| 0 &#x3D;&gt; Matrix.of (fun i j &#x3D;&gt; if (i &#x3D; j) then 1 else 0)<br>| 1 &#x3D;&gt; Matrix.of (fun i j &#x3D;&gt; if (i &#x3D; j) then 2 else 0)<br>| _ &#x3D;&gt; Matrix.of (fun i j &#x3D;&gt; 3)</p>
+]]></content>
+      <categories>
+        <category>Lean</category>
+      </categories>
+      <tags>
+        <tag>Lean</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Liner_Algebra</title>
+    <url>/2025/01/31/Liner-Algebra/</url>
+    <content><![CDATA[<h2 id="多线性映射"><a href="#多线性映射" class="headerlink" title="多线性映射"></a>多线性映射</h2><h2 id="交替多线性映射（ALternation）"><a href="#交替多线性映射（ALternation）" class="headerlink" title="交替多线性映射（ALternation）"></a>交替多线性映射（ALternation）</h2><p>交替映射是一个特殊的多线性映射，具备一种对称性质，如果任意两个输入变量间交换，函数的值会改变符号。这意味着交替映射在某些情况下是反对称的。<br>例子：<br>f(v1,v2…vk)&#x3D; - f(v2,v1…vk)</p>
+<p>等价于<br>${\displaystyle f(x_{\sigma (1)},\dots ,x_{\sigma (n)})&#x3D;(\operatorname {sgn} \sigma )f(x_{1},\dots ,x_{n})\quad {\text{ for any }}\sigma \in \mathrm {S} _{n},}$<br>所以行列式是交替映射<br>定义：<br>R: 交换环<br>V，W是R上的modules<br>${\displaystyle f:V^{n}\to W}$</p>
+<ol>
+<li>只要存在xi&#x3D;xj（i不等于j）然后f(x1, …, xn)&#x3D;0</li>
+</ol>
+<p>向量空间上：<br>V，W是同一个域上的向量空间<br>如果x1，…xn线性相关，那么f(x1, …, xn)&#x3D;0，这就是多线性映射</p>
+<h1 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h1><p>空间中的有向箭头，<br>列表<br>计算： 向量相加，向量数乘<br>#<br>向量的线性组合： 向量的数乘之和 a * $\vec{v}$ + b * $\vec{w}$ (a b 是可以任意变化的，代表对向量的伸缩)<br>张成的空间：所有表示为给定定向量线性组合的向量集合e.g. 一个平面就是两个（任意维）线性无关向量张成的空间；三个三维线性无关向量张成的空间三维空间<br>Linearly dependent: 一组向量中至少有一个是多余的，没有对张成的空间做出任何贡献，当有多个向量移除一个向量不会减少张成的空间，就称它们线性相关（其中一个向量可以被其他所有向量的线性组合表示出来）<br>Linearly independent:一组向量都增加了张成的空间 the only solution to $a * \vec{v} + b * \vec{w} + c * \vec{u} &#x3D; \vec{0} $ is a &#x3D; b &#x3D; c &#x3D; 0</p>
+<p>The basis of a vector space is a set of linearly independent vectors that span the full space.基就是张成该空间的线性无关向量的集合</p>
+<h1 id="linear-transformation（变换后直线依旧是直线，原点固定，看作保持网格线平行并且等距分布）"><a href="#linear-transformation（变换后直线依旧是直线，原点固定，看作保持网格线平行并且等距分布）" class="headerlink" title="linear transformation（变换后直线依旧是直线，原点固定，看作保持网格线平行并且等距分布）"></a>linear transformation（变换后直线依旧是直线，原点固定，看作保持网格线平行并且等距分布）</h1><p>可以把矩阵的列看成变换后的基向量，把矩阵乘积看成线性组合</p>
+<p>例子： 一个坐标系，改变坐标距离，就不是线性变换，因为对角线原来是直线，变换后不是直线了</p>
+<h1 id="the-“determinant”-of-a-transformation"><a href="#the-“determinant”-of-a-transformation" class="headerlink" title="the “determinant” of a transformation"></a>the “determinant” of a transformation</h1><p>行列式：线性变换对面积产生改变的比例
+ </p>
+]]></content>
+      <categories>
+        <category>Linear Algebra</category>
+      </categories>
+      <tags>
+        <tag>Linear Algebra</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>How_To_ASK_QUESITION_SMART_WAY</title>
     <url>/2026/01/10/How-To-ASK-QUESITION-SMART-WAY/</url>
     <content><![CDATA[<h1 id="资源链"><a href="#资源链" class="headerlink" title="资源链"></a>资源链</h1><p><a href="http://stackexchange.com/sites">Q&amp;A siteS: stack exchange</a></p>
@@ -43,22 +82,6 @@
       </categories>
       <tags>
         <tag>READING ARTICAL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Lean4</title>
-    <url>/2024/12/31/Lean4/</url>
-    <content><![CDATA[<p>Lean4：被称为交互式定理证明器（interactive theorem-proving system）的计算机系统（也称为证明助手或形式化系统）提供了另一种表达数学论证的方法。<br>mathlib(Lean mathematical library)是一项由社区推动的工作，旨在建立一个以lean proof assistant形式化的统一数学库。<br>a proof assistant：(一个软件，提供规范语言，依照规范语言定义对象和性质，证明定理，系统检查定理的正确性，直至逻辑基础)<br>Formalization:  我们将用一种规范的语言（如编程语言）来书写数学定义、定理和证明，让 Lean 能够理解。 作为回报，Lean 会提供反馈和信息，解释表达式并保证其格式正确，并最终认证我们证明的正确性。</p>
-<p>Lean 是一个工具将复杂表达式转换成形式化语言(dependent type theory)</p>
-<h1 id="Syntax-Model"><a href="#Syntax-Model" class="headerlink" title="Syntax Model"></a>Syntax Model</h1><p><a href="https://lean-lang.org/doc/reference/latest/Notations-and-Macros/Defining-New-Syntax/#The-Lean-Language-Reference--Notations-and-Macros--Defining-New-Syntax--Syntax-Model">sytax model</a><br>Lean’s parser produces a concrete syntax tree,of type <code>Lean.Syntax</code>(is an inductive type that represents all of Lean’s syntax,including commands,terms,tactics , and any custom extensions)all of those are basic building blocks: Atoms(fundamental terminals),Identifiers,Nodes(the parsing of nonterminals,contain a syntax kind), Missing Syntax(error mess)<br>Constructors of <code>Lean.Syntax</code>:missing,node,atom,ident</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/-</span><br><span class="line">Copyright (c) 2023 Eric Wieser. All rights reserved.</span><br><span class="line">Released under Apache 2.0 license as described in the file LICENSE.</span><br><span class="line">Authors: Eric Wieser</span><br><span class="line">-/</span><br><span class="line">syntax (name := eqns) &quot;eqns&quot; ident* : attr</span><br><span class="line"></span><br><span class="line">initialize eqnsAttribute : NameMapExtension (Array Name) ←</span><br><span class="line">  registerNameMapAttribute &#123;</span><br><span class="line">    name  := `eqns</span><br><span class="line">    descr := &quot;Overrides the equation lemmas for a declation to the provided list&quot;</span><br><span class="line">    add   :=  fun</span><br><span class="line">    | _, `(attr| eqns $[$names]*) =&gt; -- 这里面的第二个参数是模式匹配，捕获了eqns关键字后面的所有标识符</span><br><span class="line">      pure &lt;| names.map (fun n =&gt; n.getId)</span><br><span class="line">    | _, _ =&gt; Lean.Elab.throwUnsupportedSyntax &#125;</span><br><span class="line"></span><br><span class="line">initialize Lean.Meta.registerGetEqnsFn (fun name =&gt; do</span><br><span class="line">  pure (eqnsAttribute.find? (← getEnv) name))</span><br></pre></td></tr></table></figure>
-<p>本来是def M : ℕ → Matrix m n ℕ<br>def M : ℕ → Matrix (Fin 3) (Fin 3) ℕ – 类型不匹配的原因之一：没有指定矩阵的具体维数<br>| 0 &#x3D;&gt; Matrix.of (fun i j &#x3D;&gt; if (i &#x3D; j) then 1 else 0)<br>| 1 &#x3D;&gt; Matrix.of (fun i j &#x3D;&gt; if (i &#x3D; j) then 2 else 0)<br>| _ &#x3D;&gt; Matrix.of (fun i j &#x3D;&gt; 3)</p>
-]]></content>
-      <categories>
-        <category>Lean</category>
-      </categories>
-      <tags>
-        <tag>Lean</tag>
       </tags>
   </entry>
   <entry>
@@ -111,29 +134,6 @@
       </categories>
       <tags>
         <tag>Lean</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Liner_Algebra</title>
-    <url>/2025/01/31/Liner-Algebra/</url>
-    <content><![CDATA[<h2 id="多线性映射"><a href="#多线性映射" class="headerlink" title="多线性映射"></a>多线性映射</h2><h2 id="交替多线性映射（ALternation）"><a href="#交替多线性映射（ALternation）" class="headerlink" title="交替多线性映射（ALternation）"></a>交替多线性映射（ALternation）</h2><p>交替映射是一个特殊的多线性映射，具备一种对称性质，如果任意两个输入变量间交换，函数的值会改变符号。这意味着交替映射在某些情况下是反对称的。<br>例子：<br>f(v1,v2…vk)&#x3D; - f(v2,v1…vk)</p>
-<p>等价于<br>${\displaystyle f(x_{\sigma (1)},\dots ,x_{\sigma (n)})&#x3D;(\operatorname {sgn} \sigma )f(x_{1},\dots ,x_{n})\quad {\text{ for any }}\sigma \in \mathrm {S} _{n},}$<br>所以行列式是交替映射<br>定义：<br>R: 交换环<br>V，W是R上的modules<br>${\displaystyle f:V^{n}\to W}$</p>
-<ol>
-<li>只要存在xi&#x3D;xj（i不等于j）然后f(x1, …, xn)&#x3D;0</li>
-</ol>
-<p>向量空间上：<br>V，W是同一个域上的向量空间<br>如果x1，…xn线性相关，那么f(x1, …, xn)&#x3D;0，这就是多线性映射</p>
-<h1 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h1><p>空间中的有向箭头，<br>列表<br>计算： 向量相加，向量数乘<br>#<br>向量的线性组合： 向量的数乘之和 a * $\vec{v}$ + b * $\vec{w}$ (a b 是可以任意变化的，代表对向量的伸缩)<br>张成的空间：所有表示为给定定向量线性组合的向量集合e.g. 一个平面就是两个（任意维）线性无关向量张成的空间；三个三维线性无关向量张成的空间三维空间<br>Linearly dependent: 一组向量中至少有一个是多余的，没有对张成的空间做出任何贡献，当有多个向量移除一个向量不会减少张成的空间，就称它们线性相关（其中一个向量可以被其他所有向量的线性组合表示出来）<br>Linearly independent:一组向量都增加了张成的空间 the only solution to $a * \vec{v} + b * \vec{w} + c * \vec{u} &#x3D; \vec{0} $ is a &#x3D; b &#x3D; c &#x3D; 0</p>
-<p>The basis of a vector space is a set of linearly independent vectors that span the full space.基就是张成该空间的线性无关向量的集合</p>
-<h1 id="linear-transformation（变换后直线依旧是直线，原点固定，看作保持网格线平行并且等距分布）"><a href="#linear-transformation（变换后直线依旧是直线，原点固定，看作保持网格线平行并且等距分布）" class="headerlink" title="linear transformation（变换后直线依旧是直线，原点固定，看作保持网格线平行并且等距分布）"></a>linear transformation（变换后直线依旧是直线，原点固定，看作保持网格线平行并且等距分布）</h1><p>可以把矩阵的列看成变换后的基向量，把矩阵乘积看成线性组合</p>
-<p>例子： 一个坐标系，改变坐标距离，就不是线性变换，因为对角线原来是直线，变换后不是直线了</p>
-<h1 id="the-“determinant”-of-a-transformation"><a href="#the-“determinant”-of-a-transformation" class="headerlink" title="the “determinant” of a transformation"></a>the “determinant” of a transformation</h1><p>行列式：线性变换对面积产生改变的比例
- </p>
-]]></content>
-      <categories>
-        <category>Linear Algebra</category>
-      </categories>
-      <tags>
-        <tag>Linear Algebra</tag>
       </tags>
   </entry>
   <entry>
@@ -232,20 +232,6 @@
       </tags>
   </entry>
   <entry>
-    <title>diary</title>
-    <url>/2026/01/13/diary/</url>
-    <content><![CDATA[<p>Today is not a big day, but an interview day.</p>
-<p>Today, I had my first shortest interview, maybe my second, if you exclude the time spent on handwriting.</p>
-<p>Last Friday, I got an interview for thirty minutes, what I performed looks like an idiot, like that I never got into university, now with my bachelor’s degree, not a bad school background. I can get some interview chances. Which makes me suck, but fortunate. I don’t want to be judged, but if I am good, the judge is not so unbearable. Rediculous!</p>
-<p>Each time the same question comes to me, I think a lot or a little,then give a suck anwser. I do not like that question, like we are not so familiar that we can joke with each other.</p>
-<p>I am boring, but not bored. I need to take actions that are noticeable and do not require verbal explanation.</p>
-<p>20260613</p>
-]]></content>
-      <tags>
-        <tag>diary</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Next主题</title>
     <url>/2024/10/05/hello-world/</url>
     <content><![CDATA[<h2 id="指路Next入门教程"><a href="#指路Next入门教程" class="headerlink" title="指路Next入门教程"></a><a href="https://hexo-next.readthedocs.io/zh-cn/latest/next/">指路Next入门教程</a></h2>]]></content>
@@ -290,6 +276,113 @@
         <tag>68000 Assembly</tag>
         <tag>Jack W. Crenshaw</tag>
         <tag>compiler</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>diary</title>
+    <url>/2026/01/13/diary/</url>
+    <content><![CDATA[<p>Today is not a big day, but an interview day.</p>
+<p>Today, I had my first shortest interview, maybe my second, if you exclude the time spent on handwriting.</p>
+<p>Last Friday, I got an interview for thirty minutes, what I performed looks like an idiot, like that I never got into university, now with my bachelor’s degree, not a bad school background. I can get some interview chances. Which makes me suck, but fortunate. I don’t want to be judged, but if I am good, the judge is not so unbearable. Rediculous!</p>
+<p>Each time the same question comes to me, I think a lot or a little,then give a suck anwser. I do not like that question, like we are not so familiar that we can joke with each other.</p>
+<p>I am boring, but not bored. I need to take actions that are noticeable and do not require verbal explanation.</p>
+<p>20260613</p>
+]]></content>
+      <tags>
+        <tag>diary</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mathlib4_source_code_LinearAlgebra</title>
+    <url>/2025/02/07/mathlib4-source-code-LinearAlgebra/</url>
+    <content><![CDATA[<p>具有向量空间结构意味着具有加法交换群</p>
+<h1 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h1><ol>
+<li>基础概念<br>Basis（基础）</li>
+</ol>
+<p>Dimension（维数）</p>
+<p>FiniteDimensional（有限维）</p>
+<p>FiniteDimensional.lean（有限维.lean）</p>
+<p>FiniteSpan.lean（有限生成.lean）</p>
+<p>Span（张成）</p>
+<p>StdBasis.lean（标准基.lean）</p>
+<ol start="3">
+<li>矩阵与行列式<br>Matrix（矩阵）</li>
+</ol>
+<p>Determinant.lean（行列式.lean）</p>
+<p>Vandermonde.lean（范德蒙行列式.lean）</p>
+<p>Charpoly（特征多项式）</p>
+<p>Trace.lean（迹.lean）</p>
+<ol start="2">
+<li>线性映射与线性空间<br>LinearIndependent.lean（线性无关.lean）</li>
+</ol>
+<p>LinearDisjoint.lean（线性无关.lean）</p>
+<p>LinearPMap.lean（线性投影映射.lean）</p>
+<p>Isomorphisms.lean（同构.lean）</p>
+<p>Quotient（商）</p>
+<p>AffineSpace（仿射空间）</p>
+<ol start="4">
+<li>双线性形式与二次型<br>BilinearForm（双线性形式）</li>
+</ol>
+<p>BilinearMap.lean（双线性映射.lean）</p>
+<p>QuadraticForm（二次型）</p>
+<p>SesquilinearForm.lean（半双线性型.lean）</p>
+<ol start="6">
+<li>特征值与特征空间<br>Eigenspace（特征空间）</li>
+</ol>
+<p>AnnihilatingPolynomial.lean（零化多项式.lean）</p>
+<p>JordanChevalley.lean（约当-舍瓦莱.lean）</p>
+<ol start="5">
+<li>张量积与外代数<br>TensorProduct（张量积）</li>
+</ol>
+<p>TensorAlgebra（张量代数）</p>
+<p>TensorPower（张量幂）</p>
+<p>ExteriorAlgebra（外代数）</p>
+<p>ExteriorPower（外幂）</p>
+<p>PiTensorProduct.lean（π张量积.lean）</p>
+<ol start="7">
+<li>群与表示<br>GeneralLinearGroup.lean（一般线性群.lean）</li>
+</ol>
+<p>SymplecticGroup.lean（辛群.lean）</p>
+<p>UnitaryGroup.lean（酉群.lean）</p>
+<p>RootSystem（根系）</p>
+<p>Reflection.lean（反射.lean）</p>
+<ol start="8">
+<li>特殊结构与定理<br>Alternating（交错）</li>
+</ol>
+<p>CliffordAlgebra（克利福德代数）</p>
+<p>DirectSum（直和）</p>
+<p>FreeModule（自由模）</p>
+<p>FreeAlgebra.lean（自由代数.lean）</p>
+<p>FreeProduct（自由积）</p>
+<p>InvariantBasisNumber.lean（不变基数.lean）</p>
+<p>PID.lean（主理想整环.lean）</p>
+<p>Semisimple.lean（半单.lean）</p>
+<ol start="9">
+<li>几何与投影<br>Projectivization（射影化）</li>
+</ol>
+<p>Projection.lean（投影.lean）</p>
+<p>Orientation.lean（定向.lean）</p>
+<p>Ray.lean（射线.lean）</p>
+<ol start="10">
+<li>其他工具与辅助模块<br>DFinsupp.lean（有限支撑函数.lean）</li>
+</ol>
+<p>Finsupp（有限支撑）</p>
+<p>Pi.lean（π.lean）</p>
+<p>Prod.lean（积.lean）</p>
+<p>Countable.lean（可数.lean）</p>
+<p>Goursat.lean（古尔萨.lean）</p>
+<p>Lagrange.lean（拉格朗日.lean）</p>
+<p>PerfectPairing（完美配对）</p>
+<p>SModEq.lean（模同余.lean）</p>
+<p>Coevaluation.lean（余评估.lean）</p>
+<p>Contraction.lean（收缩.lean）</p>
+<p>CrossProduct.lean（叉积.lean）</p>
+]]></content>
+      <categories>
+        <category>Lean</category>
+      </categories>
+      <tags>
+        <tag>Linear Algebra</tag>
       </tags>
   </entry>
   <entry>
@@ -462,99 +555,6 @@
       </categories>
       <tags>
         <tag>Lean</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>mathlib4_source_code_LinearAlgebra</title>
-    <url>/2025/02/07/mathlib4-source-code-LinearAlgebra/</url>
-    <content><![CDATA[<p>具有向量空间结构意味着具有加法交换群</p>
-<h1 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h1><ol>
-<li>基础概念<br>Basis（基础）</li>
-</ol>
-<p>Dimension（维数）</p>
-<p>FiniteDimensional（有限维）</p>
-<p>FiniteDimensional.lean（有限维.lean）</p>
-<p>FiniteSpan.lean（有限生成.lean）</p>
-<p>Span（张成）</p>
-<p>StdBasis.lean（标准基.lean）</p>
-<ol start="3">
-<li>矩阵与行列式<br>Matrix（矩阵）</li>
-</ol>
-<p>Determinant.lean（行列式.lean）</p>
-<p>Vandermonde.lean（范德蒙行列式.lean）</p>
-<p>Charpoly（特征多项式）</p>
-<p>Trace.lean（迹.lean）</p>
-<ol start="2">
-<li>线性映射与线性空间<br>LinearIndependent.lean（线性无关.lean）</li>
-</ol>
-<p>LinearDisjoint.lean（线性无关.lean）</p>
-<p>LinearPMap.lean（线性投影映射.lean）</p>
-<p>Isomorphisms.lean（同构.lean）</p>
-<p>Quotient（商）</p>
-<p>AffineSpace（仿射空间）</p>
-<ol start="4">
-<li>双线性形式与二次型<br>BilinearForm（双线性形式）</li>
-</ol>
-<p>BilinearMap.lean（双线性映射.lean）</p>
-<p>QuadraticForm（二次型）</p>
-<p>SesquilinearForm.lean（半双线性型.lean）</p>
-<ol start="6">
-<li>特征值与特征空间<br>Eigenspace（特征空间）</li>
-</ol>
-<p>AnnihilatingPolynomial.lean（零化多项式.lean）</p>
-<p>JordanChevalley.lean（约当-舍瓦莱.lean）</p>
-<ol start="5">
-<li>张量积与外代数<br>TensorProduct（张量积）</li>
-</ol>
-<p>TensorAlgebra（张量代数）</p>
-<p>TensorPower（张量幂）</p>
-<p>ExteriorAlgebra（外代数）</p>
-<p>ExteriorPower（外幂）</p>
-<p>PiTensorProduct.lean（π张量积.lean）</p>
-<ol start="7">
-<li>群与表示<br>GeneralLinearGroup.lean（一般线性群.lean）</li>
-</ol>
-<p>SymplecticGroup.lean（辛群.lean）</p>
-<p>UnitaryGroup.lean（酉群.lean）</p>
-<p>RootSystem（根系）</p>
-<p>Reflection.lean（反射.lean）</p>
-<ol start="8">
-<li>特殊结构与定理<br>Alternating（交错）</li>
-</ol>
-<p>CliffordAlgebra（克利福德代数）</p>
-<p>DirectSum（直和）</p>
-<p>FreeModule（自由模）</p>
-<p>FreeAlgebra.lean（自由代数.lean）</p>
-<p>FreeProduct（自由积）</p>
-<p>InvariantBasisNumber.lean（不变基数.lean）</p>
-<p>PID.lean（主理想整环.lean）</p>
-<p>Semisimple.lean（半单.lean）</p>
-<ol start="9">
-<li>几何与投影<br>Projectivization（射影化）</li>
-</ol>
-<p>Projection.lean（投影.lean）</p>
-<p>Orientation.lean（定向.lean）</p>
-<p>Ray.lean（射线.lean）</p>
-<ol start="10">
-<li>其他工具与辅助模块<br>DFinsupp.lean（有限支撑函数.lean）</li>
-</ol>
-<p>Finsupp（有限支撑）</p>
-<p>Pi.lean（π.lean）</p>
-<p>Prod.lean（积.lean）</p>
-<p>Countable.lean（可数.lean）</p>
-<p>Goursat.lean（古尔萨.lean）</p>
-<p>Lagrange.lean（拉格朗日.lean）</p>
-<p>PerfectPairing（完美配对）</p>
-<p>SModEq.lean（模同余.lean）</p>
-<p>Coevaluation.lean（余评估.lean）</p>
-<p>Contraction.lean（收缩.lean）</p>
-<p>CrossProduct.lean（叉积.lean）</p>
-]]></content>
-      <categories>
-        <category>Lean</category>
-      </categories>
-      <tags>
-        <tag>Linear Algebra</tag>
       </tags>
   </entry>
 </search>
